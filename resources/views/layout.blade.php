@@ -81,7 +81,7 @@
             </div>
             <div class="col-lg-4 align-self-center">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html"><img src="{{asset('images/logo.png')}}" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-4 align-self-center">
@@ -102,7 +102,7 @@
     <div class="container expanded">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <a href="index.html"><img src="{{asset('images/logo.png')}}" alt=""></a>
             </div>
             <div class="header-nav">
                 <ul class="main-menu">

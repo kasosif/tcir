@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
+    return view('construction');
+});
+Route::get('/demo', function () {
     return view('layout');
 });

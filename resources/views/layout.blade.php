@@ -33,36 +33,127 @@
 <div class="mobile-nav-wrapper">
     <div class="mobile-menu-inner">
         <ul class="mobile-menu">
-            <li><a href="">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li class="has-sub">
-                <a href="#">Economics <i class="sub-icon fa fa-angle-down"></i></a>
+                <a href="#">Africa <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="slider-boxed.html">Economic 1</a></li>
-                    <li><a href="slider-full-width.html">Economic 2</a></li>
-                    <li class="has-sub"><a href="#">Economic 3 <i class="sub-icon fa fa-angle-down"></i></a>
+                    <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
-                            <li><a href="slider-small.html">Economic 3-1</a></li>
-                            <li><a href="slider-infinity.html">Economic 3-2</a></li>
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
                         </ul>
                     </li>
 
                 </ul>
             </li>
             <li class="has-sub">
-                <a href="#">Politics <i class="sub-icon fa fa-angle-down"></i></a>
+                <a href="#">Mediterranean countries <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="slider-boxed.html">Politic 1</a></li>
-                    <li><a href="slider-full-width.html">Politic 2</a></li>
-                    <li class="has-sub"><a href="#">Politic 3 <i class="sub-icon fa fa-angle-down"></i></a>
+                    <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
-                            <li><a href="slider-small.html">Politic 3-1</a></li>
-                            <li><a href="slider-infinity.html">Politic 3-2</a></li>
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
                         </ul>
                     </li>
 
                 </ul>
             </li>
-            <li><a href="pages-about-me-v1.html">About TCIR</a></li>
+            <li class="has-sub"><a href="#">Arab countries <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">MENA <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">America <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">Asia <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">Think Tank <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
@@ -81,13 +172,13 @@
             </div>
             <div class="col-lg-4 align-self-center">
                 <div class="logo">
-                    <a href="#"><img src="{{asset('images/logo.png')}}" style="" alt=""></a>
+                    <a href="#"><img src="{{asset('images/logo.png')}}" style="width: 100%" alt="" ></a>
                 </div>
             </div>
             <div class="col-lg-4 align-self-center">
                 <ul class="search-item">
                     <li class="menu-item menu-search">
-                        <a href="#search" id="menu-search-btn">
+                        <a href="#" id="menu-search-btn">
                             <i class="icon_search"></i>
                         </a>
                     </li>
@@ -102,37 +193,124 @@
     <div class="container expanded">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="index.html"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo.png')}}" alt=""></a>
+                <a href="#"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo.png')}}" alt=""></a>
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
-                    <li class="menu-item-has-children active"><a href="#">Economics</a>
+                    <li class="menu-item-has-children active"><a href="#">Africa</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Economic 1</a></li>
-                            <li><a href="home-recent.html">Economic 2</a></li>
-                            <li class="menu-item-has-children"><a href="#">Economic 3</a>
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
-                                    <li><a href="home-list.html">Economic 3-1</a></li>
-                                    <li><a href="home-full-width.html">Economic 3-2</a></li>
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="#">Mediterranean countries</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
                                 </ul>
                             </li>
 
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="#">Politics</a>
+                    <li class="menu-item-has-children" ><a href="#">Arab countries</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Politic 1</a></li>
-                            <li><a href="home-recent.html">Politic 2</a></li>
-                            <li class="menu-item-has-children"><a href="#">Politic 3</a>
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
-                                    <li><a href="home-list.html">Politic 3-1</a></li>
-                                    <li><a href="home-full-width.html">Politic 3-2</a></li>
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
                                 </ul>
                             </li>
-
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="pages-about-me-v1.html">About TCIR</a></li>
+                    <li class="menu-item-has-children">
+                        <a  href="#">MENA</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a  href="#">America</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children" ><a  href="#">Asia</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a  href="#">Think Tank</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="header-widgets">
@@ -171,7 +349,7 @@
                         <div class="meta-category">
                             <span>Fashion</span>
                         </div>
-                        <a href="single-standard-post.html"><h4>tousled <em>subway</em> chartreuse</h4></a>
+                        <a href="#"><h4>tousled <em>subway</em> chartreuse</h4></a>
                         <ul class="post-info">
                             <li><a href="#">January 10, 2020</a></li>
                             <li><a href="#">6 Comments</a></li>
@@ -187,7 +365,7 @@
                         <div class="meta-category">
                             <span>Lifestyle</span>
                         </div>
-                        <a href="single-standard-post.html"><h4>mumblecore <em>pressed</em> hashtag</h4></a>
+                        <a href="#"><h4>mumblecore <em>pressed</em> hashtag</h4></a>
                         <ul class="post-info">
                             <li><a href="#">January 10, 2020</a></li>
                             <li><a href="#">3 Comments</a></li>
@@ -203,7 +381,7 @@
                         <div class="meta-category">
                             <span>Beauty</span>
                         </div>
-                        <a href="single-standard-post.html"><h4>iceland <em>franzen</em> asymmetrical</h4></a>
+                        <a href="#"><h4>iceland <em>franzen</em> asymmetrical</h4></a>
                         <ul class="post-info">
                             <li><a href="#">January 10, 2020</a></li>
                             <li><a href="#">5 Comments</a></li>
@@ -219,7 +397,7 @@
                         <div class="meta-category">
                             <span>Nature</span>
                         </div>
-                        <a href="single-standard-post.html"><h4>locavore <em>actually</em> vexillologist</h4></a>
+                        <a href="#"><h4>locavore <em>actually</em> vexillologist</h4></a>
                         <ul class="post-info">
                             <li><a href="#">January 10, 2020</a></li>
                             <li><a href="#">8 Comments</a></li>
@@ -240,13 +418,13 @@
                         <div class="col-lg-12">
                             <div class="standard-post full-width-post">
                                 <div class="post-image">
-                                    <a href="single-standard-post.html"><img src="http://placehold.it/1170x450" alt=""></a>
+                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="meta-category">
                                         <span>Fashion</span>
                                     </div>
-                                    <a href="single-standard-post.html"><h4>Sartorial dreamcatcher food truck <em>cardigan bicycle</em></h4></a>
+                                    <a href="#"><h4>Sartorial dreamcatcher food truck <em>cardigan bicycle</em></h4></a>
                                     <ul class="post-info">
                                         <li><a href="#">January 10, 2020</a></li>
                                         <li><a href="#">Admin</a></li>
@@ -274,13 +452,13 @@
                         <div class="col-lg-12">
                             <div class="standard-post full-width-post">
                                 <div class="post-image">
-                                    <a href="single-standard-post.html"><img src="http://placehold.it/1170x450" alt=""></a>
+                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="meta-category">
                                         <span>Fashion</span>
                                     </div>
-                                    <a href="single-standard-post.html"><h4>The Ultimate <em>Women’s Bag</em> Guide Latest Fashion <em>Trends</em></h4></a>
+                                    <a href="#"><h4>The Ultimate <em>Women’s Bag</em> Guide Latest Fashion <em>Trends</em></h4></a>
                                     <ul class="post-info">
                                         <li><a href="#">January 10, 2020</a></li>
                                         <li><a href="#">Admin</a></li>
@@ -308,13 +486,13 @@
                         <div class="col-lg-12">
                             <div class="standard-post full-width-post">
                                 <div class="post-image">
-                                    <a href="single-standard-post.html"><img src="http://placehold.it/1170x450" alt=""></a>
+                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="meta-category">
                                         <span>Fashion</span>
                                     </div>
-                                    <a href="single-standard-post.html"><h4><em>helvetica</em> skateboard semiotics <em>tumeric shorts</em> drinking</h4></a>
+                                    <a href="#"><h4><em>helvetica</em> skateboard semiotics <em>tumeric shorts</em> drinking</h4></a>
                                     <ul class="post-info">
                                         <li><a href="#">January 10, 2020</a></li>
                                         <li><a href="#">Admin</a></li>

@@ -35,7 +35,7 @@
         <ul class="mobile-menu">
             <li><a href="#">Home</a></li>
             <li class="has-sub">
-                <a href="#">Africa <i class="sub-icon fa fa-angle-down"></i></a>
+                <a href="#">Tunisia <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -87,7 +87,7 @@
 
                 </ul>
             </li>
-            <li class="has-sub"><a href="#">MENA <i class="sub-icon fa fa-angle-down"></i></a>
+            <li class="has-sub"><a href="#">Africa <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -154,6 +154,12 @@
                     </li>
                 </ul>
             </li>
+            <li class="has-sub"><a href="#">About Us <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Our Resumes</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
@@ -163,19 +169,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 align-self-center">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 align-self-center">
                 <div class="logo">
                     <a href="#"><img src="{{asset('images/logo.png')}}" style="width: 100%" alt="" ></a>
                 </div>
             </div>
-            <div class="col-lg-4 align-self-center">
+            <div class="col-lg-8 align-self-center">
                 <ul class="search-item">
                     <li class="menu-item menu-search">
                         <a href="#" id="menu-search-btn">
@@ -197,7 +195,7 @@
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
-                    <li class="menu-item-has-children active"><a href="#">Africa</a>
+                    <li class="menu-item-has-children active"><a href="#">Tunisia</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -247,7 +245,7 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a  href="#">MENA</a>
+                        <a  href="#">Africa</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -308,6 +306,16 @@
                                     <li><a href="#">Politic 1-1</a></li>
                                     <li><a href="#">Politic 1-2</a></li>
                                 </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a  href="#">About Us</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Resumes</a>
                             </li>
                         </ul>
                     </li>
@@ -541,13 +549,13 @@
                         <span class="footer-title">Topics</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Topic 1</a>
+                        <a class="nav-link footer-link" href="#">Politics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Topic 2</a>
+                        <a class="nav-link footer-link" href="#">Economics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Topic 3</a>
+                        <a class="nav-link footer-link" href="#">Immmigration</a>
                     </li>
                 </ul>
             </div>
@@ -557,13 +565,22 @@
                         <span class="footer-title">Regions </span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Region 1</a>
+                        <a class="nav-link footer-link" href="#">Tunisia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Region 2</a>
+                        <a class="nav-link footer-link" href="#">Mediterranean countries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Region 3</a>
+                        <a class="nav-link footer-link" href="#">Arab countries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="#">Africa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="#">America</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="#">Asia</a>
                     </li>
                 </ul>
             </div>
@@ -573,22 +590,26 @@
                         <span class="footer-title ">About TCIR</span>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link footer-link">About 1</a>
+                        <a href="#" class="nav-link footer-link">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">About 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">About 3</a>
+                        <a class="nav-link footer-link" href="#">Our Resumes</a>
                     </li>
                 </ul>
             </div>
         </div>
-
-        <div class="row text-center pt-3">
-            <div class="col-md-4 box">
+        <div class="row pb-0">
+            <div class="col-md-6">
                 <span class="copyright quick-links">Copyright &copy; WebTailor <script>document.write(new Date().getFullYear())</script>
                 </span>
+            </div>
+            <div class="col-md-6">
+                <ul class="social-icons pull-right" style="list-style: none;display: inline-flex">
+                    <li><a href="#"><i class="fa fa-facebook" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
+                    <li><a href="mailto:admin@tcir.org"><i class="fa fa-envelope" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>

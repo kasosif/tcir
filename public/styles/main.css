@@ -1317,12 +1317,12 @@ a.footer-link {
 }
 
 a.footer-link:hover {
-    color: #fec503;
+    color: #fff;
     text-decoration: none;
 }
 
 ::selection {
-    background: #fec503;
+    background: #fff;
     text-shadow: none;
 }
 
@@ -3563,3 +3563,12 @@ ul.pagination {
     font-family: "Cormorant", Arial, Helvetica, serif;
     font-size: 19px;
     color: #1e1e1e; }
+
+  .my-footer-icon {
+      color: #fff;
+      font-size: 25px;
+      margin-right: 10px;
+  }
+.my-footer-icon:hover{
+    color: #4166d4;
+}

@@ -605,10 +605,10 @@
             </div>
             <div class="col-md-6">
                 <ul class="social-icons pull-right" style="list-style: none;display: inline-flex">
-                    <li><a href="#"><i class="fa fa-facebook" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
-                    <li><a href="mailto:admin@tcir.org"><i class="fa fa-envelope" style="color: #fff;font-size: 25px;margin-right: 10px;"></i></a></li>
+                    <li><a href="#"><i class="my-footer-icon fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="my-footer-icon fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="my-footer-icon fa fa-linkedin"></i></a></li>
+                    <li><a href="mailto:admin@tcir.org"><i class="my-footer-icon fa fa-envelope" ></i></a></li>
                 </ul>
             </div>
         </div>

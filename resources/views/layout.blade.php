@@ -599,12 +599,8 @@
             </div>
         </div>
         <div class="row pb-0">
-            <div class="col-md-6">
-                <span class="copyright quick-links">Copyright &copy; WebTailor <script>document.write(new Date().getFullYear())</script>
-                </span>
-            </div>
-            <div class="col-md-6">
-                <ul class="social-icons pull-right" style="list-style: none;display: inline-flex">
+            <div class="col-md-12 d-flex justify-content-center ">
+                <ul class="social-icons" style="list-style: none;display: inline-flex">
                     <li><a href="#"><i class="my-footer-icon fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="my-footer-icon fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="my-footer-icon fa fa-linkedin"></i></a></li>

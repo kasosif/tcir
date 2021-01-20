@@ -14,6 +14,17 @@
 
     <link rel="stylesheet" href="{{asset('styles/bootstrap.css')}}" />
     <link rel="stylesheet" href="{{asset('styles/main.css')}}" />
+    <style>
+        .above-header {
+            background-color: #fbebca;
+        }
+        .site-header {
+            background-color: #fbebca !important;
+        }
+        footer {
+            background-color: #4166d4;
+        }
+    </style>
 </head>
 <body>
 
@@ -53,7 +64,7 @@
                 </ul>
             </li>
             <li class="has-sub">
-                <a href="#">Mediterranean countries <i class="sub-icon fa fa-angle-down"></i></a>
+                <a href="#">Maghreb<i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -70,7 +81,24 @@
 
                 </ul>
             </li>
-            <li class="has-sub"><a href="#">Arab countries <i class="sub-icon fa fa-angle-down"></i></a>
+            <li class="has-sub"><a href="#">Mediterranean <i class="sub-icon fa fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="has-sub"><a href="#">Economics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Economic 1-1</a></li>
+                            <li><a href="#">Economic 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Politics</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Politic 1-1</a></li>
+                            <li><a href="#">Politic 1-2</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="#">Mena region <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -104,7 +132,7 @@
 
                 </ul>
             </li>
-            <li class="has-sub"><a href="#">America <i class="sub-icon fa fa-angle-down"></i></a>
+            <li class="has-sub"><a href="#">Europe <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -121,7 +149,7 @@
 
                 </ul>
             </li>
-            <li class="has-sub"><a href="#">Asia <i class="sub-icon fa fa-angle-down"></i></a>
+            <li class="has-sub"><a href="#">World <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li class="has-sub"><a href="#">Economics</a>
                         <ul class="sub-menu">
@@ -135,29 +163,6 @@
                             <li><a href="#">Politic 1-2</a></li>
                         </ul>
                     </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">Think Tank <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">About Us <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Our Resumes</a></li>
                 </ul>
             </li>
         </ul>
@@ -195,23 +200,8 @@
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
-                    <li class="menu-item-has-children active"><a href="#">Tunisia</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a href="#">Mediterranean countries</a>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="menu-item-has-children"><a href="#">Tunisia</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -228,7 +218,7 @@
 
                         </ul>
                     </li>
-                    <li class="menu-item-has-children" ><a href="#">Arab countries</a>
+                    <li class="menu-item-has-children" ><a href="#">Maghreb</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -245,7 +235,7 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a  href="#">Africa</a>
+                        <a  href="#">Mediterranean</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -261,7 +251,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a  href="#">America</a>
+                    <li class="menu-item-has-children"><a  href="#">Mena region</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -277,7 +267,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children" ><a  href="#">Asia</a>
+                    <li class="menu-item-has-children" ><a  href="#">Africa</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -293,7 +283,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a  href="#">Think Tank</a>
+                    <li class="menu-item-has-children"><a  href="#">Europe</a>
                         <ul class="sub-menu">
                             <li class="menu-item-has-children"><a href="#">Economics</a>
                                 <ul class="sub-menu">
@@ -309,13 +299,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a  href="#">About Us</a>
+                    <li class="menu-item-has-children"><a  href="#">World</a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="#">Contact</a>
+                            <li class="menu-item-has-children"><a href="#">Economics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Economic 1-1</a></li>
+                                    <li><a href="#">Economic 1-2</a></li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="#">Our Resumes</a>
+                            <li class="menu-item-has-children"><a href="#">Politics</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Politic 1-1</a></li>
+                                    <li><a href="#">Politic 1-2</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -568,19 +564,22 @@
                         <a class="nav-link footer-link" href="#">Tunisia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Mediterranean countries</a>
+                        <a class="nav-link footer-link" href="#">Maghreb</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Arab countries</a>
+                        <a class="nav-link footer-link" href="#">Mediterranean</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="#">Mena region</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link footer-link" href="#">Africa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">America</a>
+                        <a class="nav-link footer-link" href="#">Europe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Asia</a>
+                        <a class="nav-link footer-link" href="#">World</a>
                     </li>
                 </ul>
             </div>

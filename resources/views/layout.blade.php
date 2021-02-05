@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html @if(app()->getLocale() == 'ar') dir="rtl" @endif lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>TCIR - First Try</title>
+    <title>TCIR - @yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -24,145 +24,67 @@
         footer {
             background-color: #4166d4;
         }
+        ul.social-icons li a.active {
+            background: #00adef;
+        }
     </style>
+    @yield('csspage')
 </head>
 <body>
 
-<div id="js-preloader" class="js-preloader">
-    <div class="cp-preloader cp-preloader_type1">
-        <span class="cp-preloader__letter" data-preloader="L">L</span>
-        <span class="cp-preloader__letter" data-preloader="O">O</span>
-        <span class="cp-preloader__letter" data-preloader="A">A</span>
-        <span class="cp-preloader__letter" data-preloader="D">D</span>
-        <span class="cp-preloader__letter" data-preloader="I">I</span>
-        <span class="cp-preloader__letter" data-preloader="N">N</span>
-        <span class="cp-preloader__letter" data-preloader="G">G</span>
+@section('preloader')
+    <div id="js-preloader" class="js-preloader">
+        <div class="cp-preloader cp-preloader_type1">
+            <span class="cp-preloader__letter" data-preloader="L">L</span>
+            <span class="cp-preloader__letter" data-preloader="O">O</span>
+            <span class="cp-preloader__letter" data-preloader="A">A</span>
+            <span class="cp-preloader__letter" data-preloader="D">D</span>
+            <span class="cp-preloader__letter" data-preloader="I">I</span>
+            <span class="cp-preloader__letter" data-preloader="N">N</span>
+            <span class="cp-preloader__letter" data-preloader="G">G</span>
+        </div>
     </div>
-</div>
+@show
 
 <!-- Mobile Menu -->
 <div class="mobile-nav-wrapper">
     <div class="mobile-menu-inner">
         <ul class="mobile-menu">
-            <li><a href="#">Home</a></li>
+            <li>
+                <a href="{{url('demo')}}">{{__('Home')}}</a>
+            </li>
+            @foreach($categories as $cat)
+                @if($cat->subs()->count())
+                    <li class="has-sub">
+                        <a href="{{$cat->link}}">{{$cat->name}} <i class="sub-icon fa fa-angle-down"></i></a>
+                        <ul class="sub-menu">
+                            @foreach($cat->subs as $sub)
+                                @if($sub->subs()->count())
+                                    <li class="has-sub"><a href="{{$sub->link}}">{{$sub->name}}</a>
+                                        <ul class="sub-menu">
+                                            @foreach($sub->subs as $child)
+                                                <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @else
+                                    <li><a href="{{$sub->link}}">{{$sub->name}}</a></li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{$cat->link}}">{{$cat->name}}</a>
+                    </li>
+                @endif
+            @endforeach
             <li class="has-sub">
-                <a href="#">Tunisia <i class="sub-icon fa fa-angle-down"></i></a>
+                <a href="#">{{__("Contact")}} <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub">
-                <a href="#">Maghreb<i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">Mediterranean <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">Mena region <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">Africa <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">Europe <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="has-sub"><a href="#">World <i class="sub-icon fa fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                    <li class="has-sub"><a href="#">Economics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Economic 1-1</a></li>
-                            <li><a href="#">Economic 1-2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="#">Politics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Politic 1-1</a></li>
-                            <li><a href="#">Politic 1-2</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#">{{__("Our Resumes")}}</a></li>
+                    <li><a href="#"></a>{{__("Our Mission")}}</li>
+                    <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
                 </ul>
             </li>
         </ul>
@@ -174,11 +96,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 align-self-center">
+                <ul class="social-icons">
+                    <li><a @if(app()->getLocale() == 'en') style="background-color: #00adef;" @endif href="{{app()->getLocale() == 'en' ? "#" : url('locale/en')}}" title="{{__('English')}}">{{__('En')}}</a></li>
+                    <li><a @if(app()->getLocale() == 'fr') style="background-color: #00adef;" @endif href="{{app()->getLocale() == 'fr' ? "#" : url('locale/fr')}}" title="{{__('French')}}">{{__('Fr')}}</a></li>
+                    <li><a @if(app()->getLocale() == 'ar') style="background-color: #00adef;" @endif href="{{app()->getLocale() == 'ar' ? "#" : url('locale/ar')}}" title="{{__('Arabic')}}">{{__('Ar')}}</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 align-self-center">
                 <div class="logo">
-                    <a href="#"><img src="{{asset('images/logo.png')}}" style="width: 100%" alt="" ></a>
+                    <a href="{{url('demo')}}"><img src="{{asset('images/logo.png')}}" style="width: 100%" alt="" ></a>
                 </div>
             </div>
-            <div class="col-lg-8 align-self-center">
+            <div class="col-lg-4 align-self-center">
                 <ul class="search-item">
                     <li class="menu-item menu-search">
                         <a href="#" id="menu-search-btn">
@@ -200,119 +129,37 @@
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="menu-item-has-children"><a href="#">Tunisia</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
+                    <li>
+                        <a href="{{url('demo')}}">{{__('Home')}}</a>
                     </li>
-                    <li class="menu-item-has-children" ><a href="#">Maghreb</a>
+                    @foreach($categories as $cat)
+                        @if($cat->subs()->count())
+                            <li class="menu-item-has-children"><a href="#">Tunisia</a>
+                                <ul class="sub-menu">
+                                    @foreach($cat->subs as $sub)
+                                        @if($sub->subs()->count())
+                                            <li class="menu-item-has-children"><a href="{{$sub->link}}">{{$sub->name}}</a>
+                                                <ul class="sub-menu">
+                                                    @foreach($sub->subs as $child)
+                                                        <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @else
+                                            <li><a href="{{$sub->link}}">{{$sub->name}}</a></li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @else
+                            <li><a href="{{$cat->link}}">{{$cat->name}}</a></li>
+                        @endif
+                    @endforeach
+                    <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a  href="#">Mediterranean</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a  href="#">Mena region</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children" ><a  href="#">Africa</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a  href="#">Europe</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children"><a  href="#">World</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children"><a href="#">Economics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Economic 1-1</a></li>
-                                    <li><a href="#">Economic 1-2</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a href="#">Politics</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Politic 1-1</a></li>
-                                    <li><a href="#">Politic 1-2</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
+                            <li><a href="#">{{__('Our Mission')}}</a></li>
+                            <li><a href="#">{{__('Our Resumes')}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -342,199 +189,7 @@
     </form>
 </div>
 
-<div class="main-banner full-width-banner">
-    <div class="container-fluid">
-        <div class="owl-big-banner owl-carousel">
-            <div class="item">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/1860x700" alt="">
-                <div class="item-content">
-                    <div class="main-content">
-                        <div class="meta-category">
-                            <span>Fashion</span>
-                        </div>
-                        <a href="#"><h4>tousled <em>subway</em> chartreuse</h4></a>
-                        <ul class="post-info">
-                            <li><a href="#">January 10, 2020</a></li>
-                            <li><a href="#">6 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/1860x700" alt="">
-                <div class="item-content">
-                    <div class="main-content">
-                        <div class="meta-category">
-                            <span>Lifestyle</span>
-                        </div>
-                        <a href="#"><h4>mumblecore <em>pressed</em> hashtag</h4></a>
-                        <ul class="post-info">
-                            <li><a href="#">January 10, 2020</a></li>
-                            <li><a href="#">3 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/1860x700" alt="">
-                <div class="item-content">
-                    <div class="main-content">
-                        <div class="meta-category">
-                            <span>Beauty</span>
-                        </div>
-                        <a href="#"><h4>iceland <em>franzen</em> asymmetrical</h4></a>
-                        <ul class="post-info">
-                            <li><a href="#">January 10, 2020</a></li>
-                            <li><a href="#">5 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="overlay"></div>
-                <img src="http://placehold.it/1860x700" alt="">
-                <div class="item-content">
-                    <div class="main-content">
-                        <div class="meta-category">
-                            <span>Nature</span>
-                        </div>
-                        <a href="#"><h4>locavore <em>actually</em> vexillologist</h4></a>
-                        <ul class="post-info">
-                            <li><a href="#">January 10, 2020</a></li>
-                            <li><a href="#">8 Comments</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="medium-gap full-width-home">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="standard-posts">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="standard-post full-width-post">
-                                <div class="post-image">
-                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
-                                </div>
-                                <div class="down-content">
-                                    <div class="meta-category">
-                                        <span>Fashion</span>
-                                    </div>
-                                    <a href="#"><h4>Sartorial dreamcatcher food truck <em>cardigan bicycle</em></h4></a>
-                                    <ul class="post-info">
-                                        <li><a href="#">January 10, 2020</a></li>
-                                        <li><a href="#">Admin</a></li>
-                                    </ul>
-                                    <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer ethical tbh forage, four loko fam fanny pack synth. Kombucha craft beer PBRB etsy, YOLO franzen tumeric leggings sriracha fam quinoa godard next level. Cold-pressed kinfolk cronut.</p>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="comments-info">
-                                                <i class="fa fa-comment-o"></i>
-                                                <span>8 comments</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <ul class="share-post">
-                                                <li><i class="fa fa-share-alt"></i></li>
-                                                <li><a href="#">Facebook</a>,</li>
-                                                <li><a href="#">Twitter</a>,</li>
-                                                <li><a href="#">Pinterest</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="standard-post full-width-post">
-                                <div class="post-image">
-                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
-                                </div>
-                                <div class="down-content">
-                                    <div class="meta-category">
-                                        <span>Fashion</span>
-                                    </div>
-                                    <a href="#"><h4>The Ultimate <em>Women’s Bag</em> Guide Latest Fashion <em>Trends</em></h4></a>
-                                    <ul class="post-info">
-                                        <li><a href="#">January 10, 2020</a></li>
-                                        <li><a href="#">Admin</a></li>
-                                    </ul>
-                                    <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer ethical tbh forage, four loko fam fanny pack synth. Kombucha craft beer PBRB etsy, YOLO franzen tumeric leggings sriracha fam quinoa godard next level. Cold-pressed kinfolk cronut.</p>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="comments-info">
-                                                <i class="fa fa-comment-o"></i>
-                                                <span>8 comments</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <ul class="share-post">
-                                                <li><i class="fa fa-share-alt"></i></li>
-                                                <li><a href="#">Facebook</a>,</li>
-                                                <li><a href="#">Twitter</a>,</li>
-                                                <li><a href="#">Pinterest</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="standard-post full-width-post">
-                                <div class="post-image">
-                                    <a href="#"><img src="http://placehold.it/1170x450" alt=""></a>
-                                </div>
-                                <div class="down-content">
-                                    <div class="meta-category">
-                                        <span>Fashion</span>
-                                    </div>
-                                    <a href="#"><h4><em>helvetica</em> skateboard semiotics <em>tumeric shorts</em> drinking</h4></a>
-                                    <ul class="post-info">
-                                        <li><a href="#">January 10, 2020</a></li>
-                                        <li><a href="#">Admin</a></li>
-                                    </ul>
-                                    <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer ethical tbh forage, four loko fam fanny pack synth. Kombucha craft beer PBRB etsy, YOLO franzen tumeric leggings sriracha fam quinoa godard next level. Cold-pressed kinfolk cronut.</p>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="comments-info">
-                                                <i class="fa fa-comment-o"></i>
-                                                <span>8 comments</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                            <ul class="share-post">
-                                                <li><i class="fa fa-share-alt"></i></li>
-                                                <li><a href="#">Facebook</a>,</li>
-                                                <li><a href="#">Twitter</a>,</li>
-                                                <li><a href="#">Pinterest</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <ul class="pagination">
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@yield('content')
 
 <footer>
     <div class="container">
@@ -542,57 +197,41 @@
             <div class="col-md-4 footer-column">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <span class="footer-title">Topics</span>
+                        <span class="footer-title">{{__('Topics')}}</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Politics</a>
+                        <a class="nav-link footer-link" href="#">{{__('Politics')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Economics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Immmigration</a>
+                        <a class="nav-link footer-link" href="#">{{__('Economics')}}</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-4 footer-column">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <span class="footer-title">Regions </span>
+                        <span class="footer-title">{{__('Regions')}}</span>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Tunisia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Maghreb</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Mediterranean</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Mena region</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Africa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Europe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">World</a>
-                    </li>
+                    @foreach($categories as $cat)
+                        <li class="nav-item">
+                            <a class="nav-link footer-link" href="{{$cat->link}}">{{$cat->name}}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-4 footer-column">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <span class="footer-title ">About TCIR</span>
+                        <span class="footer-title ">{{__('About TCIR')}}</span>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link footer-link">Contact Us</a>
+                        <a href="{{route('contact')}}" class="nav-link footer-link">{{__('Contact Us')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">Our Resumes</a>
+                        <a class="nav-link footer-link" href="#">{{__('Our Resumes')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="#">{{__('Our Mission')}}</a>
                     </li>
                 </ul>
             </div>
@@ -626,7 +265,7 @@
 <script src="{{asset('scripts/vendors/jquery.appear.js')}}"></script>
 <script src="{{asset('scripts/vendors/jquery.countTo.js')}}"></script>
 <script src="{{asset('scripts/main.js')}}"></script>
-
+@yield('jspage')
 
 </body>
 </html>

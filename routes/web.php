@@ -25,3 +25,11 @@ Route::get('locale/{locale}', function ($locale){
 Route::get('/demo/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/demo/our-mission', function () {
+    return view('ourmission');
+})->name('our-mission');
+
+Route::get('/demo/our-resumes', function () {
+    return view('ourresumes');
+})->name('our-resumes');

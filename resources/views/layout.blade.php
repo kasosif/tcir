@@ -82,8 +82,8 @@
             <li class="has-sub">
                 <a href="#">{{__("Contact")}} <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="#">{{__("Our Resumes")}}</a></li>
-                    <li><a href="#"></a>{{__("Our Mission")}}</li>
+                    <li><a href="{{route('our-resumes')}}">{{__("Our Resumes")}}</a></li>
+                    <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
                     <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
                 </ul>
             </li>
@@ -129,7 +129,7 @@
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
-                    <li>
+                    <li @if(app()->getLocale() == "ar") style="margin-left: 60px;" @endif>
                         <a href="{{url('demo')}}">{{__('Home')}}</a>
                     </li>
                     @foreach($categories as $cat)
@@ -158,8 +158,8 @@
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
-                            <li><a href="#">{{__('Our Mission')}}</a></li>
-                            <li><a href="#">{{__('Our Resumes')}}</a></li>
+                            <li><a href="{{route('our-mission')}}">{{__('Our Mission')}}</a></li>
+                            <li><a href="{{route('our-resumes')}}">{{__('Our Resumes')}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -228,10 +228,10 @@
                         <a href="{{route('contact')}}" class="nav-link footer-link">{{__('Contact Us')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">{{__('Our Resumes')}}</a>
+                        <a class="nav-link footer-link" href="{{route('our-resumes')}}">{{__('Our Resumes')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="#">{{__('Our Mission')}}</a>
+                        <a class="nav-link footer-link" href="{{route('our-mission')}}">{{__('Our Mission')}}</a>
                     </li>
                 </ul>
             </div>
@@ -253,6 +253,13 @@
 
 <!-- Scripts -->
 <script src="{{asset('scripts/vendors/jquery-3.4.1.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    function showCv(id) {
+        $('#' + id).modal('show');
+    }
+</script>
 <script src="{{asset('scripts/vendors/jquery.hoverIntent.min.js')}}"></script>
 <script src="{{asset('scripts/vendors/perfect-scrollbar.min.js')}}"></script>
 <script src="{{asset('scripts/vendors/jquery.easing.min.js')}}"></script>
@@ -264,8 +271,8 @@
 <script src="{{asset('scripts/vendors/owl-carousel.min.js')}}"></script>
 <script src="{{asset('scripts/vendors/jquery.appear.js')}}"></script>
 <script src="{{asset('scripts/vendors/jquery.countTo.js')}}"></script>
-<script src="{{asset('scripts/main.js')}}"></script>
 @yield('jspage')
+<script src="{{asset('scripts/main.js')}}"></script>
 
 </body>
 </html>

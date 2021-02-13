@@ -1,6 +1,6 @@
 {
     "Home": "Home",
-    "Contact": "Contact",
+    "Contact": "About",
     "Our Resumes": "Our Resumes",
     "Our Mission": "Our Mission",
     "Contact Us": "Contact Us",
@@ -39,5 +39,19 @@
     "Habib Essid": "Habib Essid",
     "Mondher Dhraïef": "Mondher Dhraïef",
     "Close": "Close",
-    "View Resume": "View Resume"
+    "View Resume": "View Resume",
+    "loader.1": "L",
+    "loader.2": "O",
+    "loader.3": "A",
+    "loader.4": "D",
+    "loader.5": "I",
+    "loader.6": "N",
+    "loader.7": "G",
+    "Steering Committee": "Steering Committee",
+    "Advisory Board": "Advisory Board",
+    "Scientific Council": "Scientific Council",
+    "Khemais Jehanaoui": "Khemais Jehanaoui",
+    "Founder" : "Founder",
+    "Abdessalem Hatira": "Abdessalem Hatira",
+    "Mohsen Boujbel": "Mohsen Boujbel"
 }

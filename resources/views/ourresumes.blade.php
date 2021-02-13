@@ -10,36 +10,88 @@
                 <div class="col-lg-12">
                     <div class="widget-sidebar about-me">
                         <div class="widget-header">
-                            <h4>{{__('Our Resumes')}}</h4>
+                            <h4>{{__('Steering Committee')}}</h4>
                         </div>
                         <div class="widget-content">
-                            <div style="margin-bottom: 5px;" class="row">
-                                <div class="col-lg-4">
-                                    <img src="{{asset('images/cv1.jpeg')}}" alt="cv1">
-                                </div>
-                                <div class="col-lg-8" style="padding: 20px;">
-                                    <h5>{{__('Ahmed Abderraouf OUNAIES')}}</h5>
-                                    <a onclick="showCv('cv1Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
-                                </div>
-                            </div>
-                            <div style="margin-bottom: 5px;" class="row">
-                                <div class="col-lg-4">
-                                    <img src="{{asset('images/cv2.png')}}" alt="cv2">
-                                </div>
-                                <div class="col-lg-8" style="padding: 20px;">
-                                    <h5>{{__('Habib Essid')}}</h5>
-                                    <a onclick="showCv('cv2Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <img src="{{asset('images/cv3.jpeg')}}" alt="cv3">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv1.jpeg')}}" alt="">
+                                            <h6>{{__('Ahmed Abderraouf OUNAIES')}}</h6>
+                                            <a onclick="showCv('cv1Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8" style="padding: 20px;">
-                                    <h5>{{__('Mondher Dhraïef')}}</h5>
-                                    <a onclick="showCv('cv3Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                <div class="col-lg-4">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv4.jpeg')}}" alt="">
+                                            <h6>{{__('Khemais Jehanaoui')}}</h6>
+                                            <h5>{{__('Founder')}}</h5>
+                                            <a onclick="showCv('cv4Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv3.jpeg')}}" alt="">
+                                            <h6>{{__('Mondher Dhraïef')}}</h6>
+                                            <a onclick="showCv('cv3Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv2.png')}}" alt="">
+                                            <h6>{{__('Habib Essid')}}</h6>
+                                            <a onclick="showCv('cv2Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv5.jpeg')}}" alt="">
+                                            <h6>{{__('Mohsen Boujbel')}}</h6>
+                                            <a onclick="showCv('cv5Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget-sidebar about-me">
+                                        <div class="widget-content">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv6.jpeg')}}" alt="">
+                                            <h6>{{__('Abdessalem Hatira')}}</h6>
+                                            <a onclick="showCv('cv6Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-top: 15px;">
+                    <div class="widget-sidebar about-me">
+                        <div class="widget-header">
+                            <h4>{{__('Advisory Board')}}</h4>
+                        </div>
+                        <div class="widget-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-top: 15px;">
+                    <div class="widget-sidebar about-me">
+                        <div class="widget-header">
+                            <h4>{{__('Scientific Council')}}</h4>
+                        </div>
+                        <div class="widget-content">
                         </div>
                     </div>
                 </div>
@@ -149,7 +201,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="cv3Modal" tabindex="-1" role="dialog" aria-labelledby="cv2Modal" aria-hidden="true">
+    <div class="modal fade" id="cv3Modal" tabindex="-1" role="dialog" aria-labelledby="cv3Modal" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -203,6 +255,388 @@
                             décorations notamment la Médaille du Travail et l’Ordre de la République.</li>
                     </ul>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Close')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cv4Modal" tabindex="-1" role="dialog" aria-labelledby="cv4Modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{__('Khemais Jehanaoui')}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @if(app()->getLocale() == 'en')
+                <div class="modal-body">
+                    <h5>Political career</h5>
+                    <ul>
+                        <li>Minister of Foreign Affairs of the Republic of
+                            Tunisia (from January 2016 to October 2019)</li>
+                        <li>Diplomatic and Foreign Affairs Advisor to the late President of the Republic, Mr. Beji Caid Essebsi, (from January 2015 to January 2016)</li>
+                        <li>Secretary of State for Foreign Affairs from July 2011 to April 2012</li>
+                    </ul>
+                    <h5>Diplomatic Career</h5>
+                    <ul>
+                        <li>
+                            Ambassador Extraordinary and Plenipotentiary of the Republic of Tunisia to the Russian Federation, jointly accredited to the Ukraine and former Republics of the Soviet Union, (from December 2007 to June 2011)
+                        </li>
+                        <li>
+                            Ambassador Extraordinary and Plenipotentiary of the Republic of Tunisia to the Court of Saint James’s (United Kingdom) jointly accredited to the Republic of Ireland (from March 1999 to October 2004)
+
+                        </li>
+                        <li>
+                            General Director of the Diplomatic Institute for Training and Studies (2013)
+                        </li>
+                        <li>
+                            General Director for Political and Economic Corporation with Europe and the European Union (from 2006 to 2007)
+                        </li>
+                        <li>
+                            Director and Chief of staff of the Minister of Foreign Affairs (from 2004 to 2006)
+                        </li>
+                        <li>
+                            Special Adviser to the Minister of Foreign Affairs in charge of policy planning (from 1996 to 1998)
+                        </li>
+                        <li>
+                            Head of the Tunisian interests Office in Tel-Aviv (from May 1996 to July 1997)
+                        </li>
+                        <li>
+                            Counsellor at the Embassy of the Republic of Tunisia in Seoul (1991-1994)
+                        </li>
+                        <li>
+                            Counsellor at the Embassy of the Republic of Tunisia in Moscow (1987-1988)
+                        </li>
+                        <li>
+                            First Secretary at the Embassy of the Republic of Tunisia in New Delhi (1982-1986)
+                        </li>
+                    </ul>
+                    <h5>Background </h5>
+                    <ul>
+                        <li>
+                            Master’s Degree in Public Law
+                        </li>
+                        <li>
+                            Post-Graduate Degree in political sciences and international relations
+                        </li>
+                        <li>
+                            National Defense College (1997)
+                        </li>
+                        <li>
+                            Barrister-at-law (1978)
+                        </li>
+                    </ul>
+                    <h5>Honours</h5>
+                    <ul>
+                        <li>
+                            Grand Officier of the Order of the Republic (2019) (Foreign)
+                        </li>
+                        <li>
+                            France: Commander of the Legion of Honour of the French Republic (2015)
+                        </li>
+                        <li>
+                            Sweden: Commander of the Royal Order of the Polar Star (2015)
+                        </li>
+                        <li>
+                            Italy: Knight Grand Cross of the Order of Merit of the Italian Republic (2017)
+                        </li>
+                        <li>
+                            Malta: Honorary member of the Xirka Ġieħ ir-Repubblika of Malta (2019)
+                        </li>
+                    </ul>
+                    <h5>Civil Society</h5>
+                    <ul>
+                        <li>
+                            Honorary Chairman of the International Association for Cooperation & Sustainable Development (AICDD)
+                        </li>
+                    </ul>
+                </div>
+                @endif
+                @if(app()->getLocale() == 'fr')
+                    <div class="modal-body">
+                        <h5>Carrière politique</h5>
+                        <ul>
+                            <li>Ministre des Affaires Etrangères de la République Tunisienne (janvier 2016-octobre 2019)</li>
+                            <li>Conseiller Principal auprès du Président de la République, feu Béji Caid Essebsi, chargé des Affaires diplomatiques et des Relations extérieures (janvier 2015 janvier 2016)
+                            </li>
+                            <li>
+                                Secrétaire d’Etat aux Affaires Etrangères (juillet 2011-avril 2012)
+                            </li>
+                        </ul>
+                        <h5>Carrière diplomatique</h5>
+                        <ul>
+                            <li>
+                                Ambassadeur Extraordinaire et Plénipotentiaire de la République Tunisienne auprès de la Fédération de Russie, de l’Ukraine et des anciennes Républiques de l’Union Soviétique, avec résidence à Moscou, (de décembre 2007 à juin 2011)
+                            </li>
+                            <li>
+                                Ambassadeur Extraordinaire et Plénipotentiaire de la République Tunisienne auprès de la Cour de Saint-James (Royaume Uni) et de la République d’Irlande, avec résidence à Londres, (de 1999 à 2004).
+                            </li>
+                            <li>
+                                Directeur Général de l’Institut Diplomatique pour la Formation et les Etudes (2013)
+
+                            </li>
+                            <li>
+                                Directeur Général des Affaires Politiques, Economiques et de Coopération pour l’Europe et l’Union Européenne (de 2006 à 2007)
+
+                            </li>
+                            <li>
+                                Chef de Cabinet du Ministre des Affaires Etrangères (de 2004 à 2006)
+
+                            </li>
+                            <li>
+                                Conseiller Spécial du Ministre des Affaires Etrangères (de 1996 à 1998).
+
+                            </li>
+                            <li>
+                                Chef du Bureau des intérêts de Tunisie à Tel-Aviv (de mai 1996 à juillet 1997)
+                            </li>
+                            <li>
+                                Conseiller des Affaires Etrangères, à Seoul (1991-1994)
+
+                            </li>
+                            <li>
+                                Conseiller des Affaires Etrangères à Moscow (1987-1988)
+                            </li>
+                            <li>
+                                Premier Secrétaire des Affaires Etrangères à New Delhi (1982-1986).
+
+                            </li>
+                        </ul>
+                        <h5>Cursus </h5>
+                        <ul>
+                            <li>
+                                Diplôme d’Etudes Supérieures (DES), de Doctorat en Droit Public
+                            </li>
+                            <li>
+                                Diplôme d’Etudes Approfondies (DEA) en Sciences Politiques et Relations Internationales                             </li>
+                            <li>
+                                Diplôme de l’Institut de Défense Nationale (15eme promotion - 1997)
+                            </li>
+                            <li>
+                                Certificat d’aptitude à la profession d’Avocat (CAPA 1978)
+                            </li>
+                        </ul>
+                        <h5>Décorations</h5>
+                        <ul>
+                            <li>
+                                Grand Officier de l’Ordre de la République (2019)
+                            </li>
+                            <li>
+                                France : Commandeur de la Légion d’Honneur de la République française (2015)
+                            </li>
+                            <li>
+                                Suède : Commandeur de l’Ordre Royal de l’Etoile Polaire (2015)
+                            </li>
+                            <li>
+                                Italie : Chevalier grand-croix de l’Ordre du Mérite de la République italienne (2017)
+                            </li>
+                            <li>
+                                Malte : Membre honoraire de l’Hommage de la République de Malte (2019)
+                            </li>
+                        </ul>
+                        <h5>Société Civile</h5>
+                        <ul>
+                            <li>
+                                Président honoraire de l’Association Internationale pour la Coopération et le Développement Durable (AICDD)
+                            </li>
+                        </ul>
+                    </div>
+                @endif
+                @if(app()->getLocale() == 'ar')
+                    <div class="modal-body">
+                        <h5>المسيرة السياسية</h5>
+                        <ul>
+                            <li>
+                                وزير الشؤون الخارجية للجمهورية التونسية (من جانفي 2016 إلى أكتوبر2019)
+                            </li>
+                            <li>
+                                مستشار أول مكلف بالشؤون الدبلوماسية والعلاقات الخارجية لدى رئيس الجمهوريّة الراحل، المرحوم محمد الباجي قائد السبسي، (من جانفي 2015 إلى جانفي 2016)
+                            </li>
+                            <li>
+                                كاتب الدولة للشؤون الخارجية (من جويلية 2011 إلى أفريل 2012)
+                            </li>
+                        </ul>
+                        <h5>المسيرة الدبلوماسية</h5>
+                        <ul>
+                            <li>
+                                سفير مفوض فوق العادة للجمهورية التونسية لدى فيدرالية روسيا، مع الإشراف على جمهوريات الاتحاد السوفياتي سابقا، ولدى أكرانيا مع الاقامة بموسكو (2007-2011)
+                            </li>
+                            <li>
+                                سفير مفوض فوق العادة للجمهورية التونسية لدى المملكة المتحدة وجمهورية إيرلندا مع الإقامة بلندن (1999-2004)
+                            </li>
+                            <li>
+                                مدير عام للمعهد الدبلوماسي للتكوين والدراسات (2013)
+
+                            </li>
+                            <li>
+                                مدير عام للعلاقات السياسية والاقتصادية والتعاون مع أوروبا والاتحاد الأوروبي (2006-2007)
+
+                            </li>
+                            <li>
+                                رئيس ديوان وزير الشؤون الخارجية (2004-2006)
+
+                            </li>
+                            <li>
+                                مستشار خاص لوزير الشؤون الخارجية (1996-1998)
+
+                            </li>
+                            <li>
+                                رئيس مكتب رعاية مصالح تونس بتل أبيب (من ماي 1996 إلى جويلية 1997)
+                            </li>
+                            <li>
+                                مستشار للشؤون الخارجية بسفارة الجمهورية تونسية بكوريا الجنوبية (1991-1994)
+
+                            </li>
+                            <li>
+                                مستشار للشؤون الخارجية بسفارة الجمهورية تونسية بالاتحاد السوفياتي (1987-1988)
+                            </li>
+                            <li>
+                                سكرتير أوّل للشؤون الخارجية بسفارة الجمهورية تونسية بالهند (1982-1986)
+
+                            </li>
+                        </ul>
+                        <h5>التحصيل العلمي</h5>
+                        <ul>
+                            <li>
+                                شهادة الدراسات المعمقة في العلوم السياسية والعلاقات الدولية
+                            </li>
+                            <li>
+                                شهادة الدراسات العليا في القانون العام
+                            <li>
+                                الإجازة في القانون العام
+                            </li>
+                            <li>
+                                معهد الدفاع الوطني (1997)
+                            </li>
+                            <li>
+                                شهادة الكفاءة لمهنة المحاماة (1978)
+                            </li>
+                        </ul>
+                        <h5>الأوسمة </h5>
+                        <ul>
+                            <li>
+                                (في تونس):  الصنف الأول من وسام الجمهورية (2019)
+                            </li>
+                            <li>
+                                فرنسا: وسام جوقة الشرف للجمهورية الفرنسية
+                            </li>
+                            <li>
+                                السويد: الوسام الملكي للنجم القطبي
+                            </li>
+                            <li>
+                                إيطاليا: وسام الاستحقاق للجمهورية الإيطالية
+                            </li>
+                            <li>
+                                مالطا: وسام الاستحقاق لجمهورية مالطا
+                            </li>
+                        </ul>
+                        <h5>المجتمع المدني</h5>
+                        <ul>
+                            <li>
+                                الرئيس الشرفي للجمعية الدولية للتعاون والتنمية المستدامة
+                            </li>
+                        </ul>
+                    </div>
+                @endif
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Close')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cv5Modal" tabindex="-1" role="dialog" aria-labelledby="cv5Modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{__('Mohsen Boujbel')}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li><b>Nom</b> : Boujbel</li>
+                        <li><b>Prénom</b> : Mohsen</li>
+                        <li><b>Née le </b> : 17 juillet 1945</li>
+                    </ul>
+                    <h5>Etudes</h5>
+                    <ul>
+                        <li>
+                            Ingénieur Statisticien Economiste de l’Ecole Nationale de la statistique et de l’Administration Economique de Paris.
+                        </li>
+                    </ul>
+                    <h5>Carrière professionnelle :</h5>
+                    <ul>
+                        <li>
+                            <b>1971-1977</b> : Ingénieur au Ministère du Plan
+                        </li>
+                        <li>
+                            <b>1977-1978</b> : Expert international à la FAO
+                        </li>
+                        <li>
+                            <b>1979-1988</b> : Directeur Général  au Ministère de l’Agriculture
+                        </li>
+                        <li>
+                            <b>1988-1991</b> : Secrétaire d’Etat à l’Agriculture
+                        </li>
+                        <li>
+                            <b>1991 à aujourd’hui</b> : Président Directeur Général de la Société
+                            <ul>
+                                <li>« BOUDJEBEL SA VACPA »</li>
+                                <li>« Borges-Tunisie »</li>
+                                <li>« Jerba Résidence »</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Close')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cv6Modal" tabindex="-1" role="dialog" aria-labelledby="cv6Modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{__('Abdessalem Hatira')}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+               <div class="modal-body">
+                   <h5 style="text-align: center">Abdessalem Hetira</h5>
+                   <p>
+                       Abdessalem Hetira a été l’Ambassadeur  de Tunisie auprès de la Belgique et du Luxembourg et Représentant Permanent auprès de  l’Union Européenne et de l’OTAN de 2007 à 2011. Auparavant, de 2005 à 2007, il a été Ambassadeur au Canada (et  Cuba). De 1998 à 2003 il a été Ambassadeur à Malte.
+                   </p>
+                   <p>
+                       Au Ministère des Affaires Etrangères, de 1992 à 1994, A.Hetira était Chargé de Mission, Directeur de la Recherche de l’Analyse et de la Planification et de 1994 à 1998, il a été Coordinateur National et Négociateur en Chef du Processus EuroMed de Barcelone et en charge du Forum Méditerranéen et du 5+5.
+
+                   </p>
+                   <p>
+                       A.Hetira a également dirigé et contribué à divers programmes nationaux relatifs l’étude de la conjoncture, l’éducation, la recherche, l’emploi, la jeunesse et la culture. En 1991, il a été Négociateur en Chef du Projet Banque Mondiale sur la Rénovation de l’Enseignement Supérieur en Tunisie.
+
+                   </p>
+                   <p>
+                       Avant son retour en Tunisie en 1988, A.Hétira a vécu pendant une quinzaine d’années en Norvège où il eut son Doctorat en Pédagogie Sociale à l’Université d’Oslo. Il y enseigna cette même discipline.
+                       De 1987 à 1992, il a travaillé comme Consultant pour l’Agence Norvégienne de la Coopération Internationale (NORAD) et pour la Banque Mondiale (IDA) sur les projets de développement de l’éducation en Afrique.
+
+                   </p>
+                   <p>
+                       Il parle couramment  l’arabe, le français, l’anglais et le norvégien…
+                   </p>
+                   <p>
+                       A.Hetira a été décoré des insignes d’Officier de l’Ordre Royal Norvégien du Mérite et du Prix de «Grant Thornton  de l’Entreprise et de l’Investissement Direct» décerné par le Président de la Rép. de Malte.
+                   </p>
+                   <p>
+                       Actuellement, il est enseignant à L’Institut Diplomatique de Formation et d’Etudes, assurant les cours sur les Relations Tunisie-UE, sur les relations EuroMéd et sur la Diplomatie Economique.
+                   </p>
+                   <p>
+                       Il est membre de différents cercles de réflexion et conseiller scientifique de plusieurs conférences.
+                   </p>
+               </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('Close')}}</button>
                 </div>

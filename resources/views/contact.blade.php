@@ -61,7 +61,7 @@
                         </div>
                         <div class="widget-content">
                             <a href="mailtto:contact@tcir.org"><i class="fa fa-envelope"></i> contact@tcir.org</a> <br>
-                            <span><i class="fa fa-phone"></i> 12345678</span>
+                            <span><i class="fa fa-phone"></i> 71784346</span>
                         </div>
                     </div>
                 </div>

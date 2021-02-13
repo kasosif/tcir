@@ -35,13 +35,21 @@
 @section('preloader')
     <div id="js-preloader" class="js-preloader">
         <div class="cp-preloader cp-preloader_type1">
-            <span class="cp-preloader__letter" data-preloader="L">L</span>
-            <span class="cp-preloader__letter" data-preloader="O">O</span>
-            <span class="cp-preloader__letter" data-preloader="A">A</span>
-            <span class="cp-preloader__letter" data-preloader="D">D</span>
-            <span class="cp-preloader__letter" data-preloader="I">I</span>
-            <span class="cp-preloader__letter" data-preloader="N">N</span>
-            <span class="cp-preloader__letter" data-preloader="G">G</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.1')}}">{{__('loader.1')}}</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.2')}}">{{__('loader.2')}}</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.3')}}">{{__('loader.3')}}</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.4')}}">{{__('loader.4')}}</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.5')}}">{{__('loader.5')}}</span>
+            <span class="cp-preloader__letter" data-preloader="{{__('loader.6')}}">{{__('loader.6')}}</span>
+            @if(app()->getLocale() == "en")
+                <span class="cp-preloader__letter" data-preloader="{{__('loader.7')}}">{{__('loader.7')}}</span>
+            @endif
+            @if(app()->getLocale() == "fr")
+                <span class="cp-preloader__letter" data-preloader="{{__('loader.7')}}">{{__('loader.7')}}</span>
+                <span class="cp-preloader__letter" data-preloader="{{__('loader.8')}}">{{__('loader.8')}}</span>
+                <span class="cp-preloader__letter" data-preloader="{{__('loader.9')}}">{{__('loader.9')}}</span>
+                <span class="cp-preloader__letter" data-preloader="{{__('loader.10')}}">{{__('loader.10')}}</span>
+            @endif
         </div>
     </div>
 @show
@@ -56,26 +64,26 @@
             @foreach($categories as $cat)
                 @if($cat->subs()->count())
                     <li class="has-sub">
-                        <a href="{{$cat->link}}">{{$cat->name}} <i class="sub-icon fa fa-angle-down"></i></a>
+                        <a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}} <i class="sub-icon fa fa-angle-down"></i></a>
                         <ul class="sub-menu">
                             @foreach($cat->subs as $sub)
                                 @if($sub->subs()->count())
-                                    <li class="has-sub"><a href="{{$sub->link}}">{{$sub->name}}</a>
+                                    <li class="has-sub"><a href="{{url('/demo/page/'.$sub->link)}}">{{$sub->name}}</a>
                                         <ul class="sub-menu">
                                             @foreach($sub->subs as $child)
-                                                <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+                                                <li><a href="{{url('/demo/page/'.$child->link)}}">{{$child->name}}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>
                                 @else
-                                    <li><a href="{{$sub->link}}">{{$sub->name}}</a></li>
+                                    <li><a href="{{url('/demo/page/'.$sub->link)}}">{{$sub->name}}</a></li>
                                 @endif
                             @endforeach
                         </ul>
                     </li>
                 @else
                     <li>
-                        <a href="{{$cat->link}}">{{$cat->name}}</a>
+                        <a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a>
                     </li>
                 @endif
             @endforeach
@@ -134,25 +142,26 @@
                     </li>
                     @foreach($categories as $cat)
                         @if($cat->subs()->count())
-                            <li class="menu-item-has-children"><a href="#">Tunisia</a>
+                            <li class="menu-item-has-children"><a href="#">{{$cat->name}}</a>
                                 <ul class="sub-menu">
                                     @foreach($cat->subs as $sub)
                                         @if($sub->subs()->count())
-                                            <li class="menu-item-has-children"><a href="{{$sub->link}}">{{$sub->name}}</a>
+                                            <li class="menu-item-has-children"><a href="{{url('/demo/page/'.$sub->link)}}">{{$sub->name}}</a>
                                                 <ul class="sub-menu">
                                                     @foreach($sub->subs as $child)
-                                                        <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+                                                        <li><a href="{{url('/demo/page/'.$child->link)}}">{{$child->name}}</a></li>
                                                     @endforeach
                                                 </ul>
                                             </li>
                                         @else
-                                            <li><a href="{{$sub->link}}">{{$sub->name}}</a></li>
+                                            <li><a href="{{url('/demo/page/'.$sub->link)}}">{{$sub->name}}</a></li>
                                         @endif
                                     @endforeach
                                 </ul>
                             </li>
+
                         @else
-                            <li><a href="{{$cat->link}}">{{$cat->name}}</a></li>
+                            <li><a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a></li>
                         @endif
                     @endforeach
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
@@ -212,9 +221,9 @@
                     <li class="nav-item">
                         <span class="footer-title">{{__('Regions')}}</span>
                     </li>
-                    @foreach($categories as $cat)
+                    @foreach(\App\Category::where('name_en','regions')->first()->subs as $cat)
                         <li class="nav-item">
-                            <a class="nav-link footer-link" href="{{$cat->link}}">{{$cat->name}}</a>
+                            <a class="nav-link footer-link" href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a>
                         </li>
                     @endforeach
                 </ul>

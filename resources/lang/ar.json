@@ -1,6 +1,6 @@
 {
     "Home": "إستقبال",
-    "Contact": "اتصل",
+    "Contact": "معلومات عنا",
     "Our Resumes": "سيرتنا الذاتية",
     "Our Mission": "مهمتنا",
     "Contact Us": "اتصل بنا",
@@ -41,5 +41,18 @@
     "Habib Essid": "حبيب الصيد",
     "Mondher Dhraïef": "منذر ضريف",
     "Close": "Fermer",
-    "View Resume": "عرض السيرة الذاتية"
+    "View Resume": "عرض السيرة الذاتية",
+    "loader.1": "ا",
+    "loader.2": "ن",
+    "loader.3": "ت",
+    "loader.4": "ظ",
+    "loader.5": "ا",
+    "loader.6": "ر",
+    "Steering Committee": "لجنة المديرين",
+    "Advisory Board": "المجلس الاستشاري",
+    "Scientific Council": "المجلس العلمي",
+    "Khemais Jehanaoui": "خميس جهناوي",
+    "Founder" : "المؤسس",
+    "Abdessalem Hatira": "عبد السلام حتيرة",
+    "Mohsen Boujbel": "محسن بوجبل"
 }

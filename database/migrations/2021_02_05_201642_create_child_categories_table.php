@@ -18,6 +18,7 @@ class CreateChildCategoriesTable extends Migration
             $table->string('name_ar');
             $table->string('name_fr');
             $table->string('name_en');
+            $table->string('link')->nullable();
             $table->bigInteger('sub_category_id')->unsigned();
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
             $table->timestamps();

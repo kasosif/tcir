@@ -221,7 +221,7 @@
                     <li class="nav-item">
                         <span class="footer-title">{{__('Regions')}}</span>
                     </li>
-                    @foreach(\App\Category::where('name_en','regions')->first()->subs as $cat)
+                    @foreach(\App\Category::where('name_en','Regions')->first()->subs as $cat)
                         <li class="nav-item">
                             <a class="nav-link footer-link" href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a>
                         </li>

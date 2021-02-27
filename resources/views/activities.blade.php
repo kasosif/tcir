@@ -67,7 +67,7 @@
                                     <div class="col-lg-12">
                                         <div class="standard-post">
                                             <div class="post-image">
-                                                <a href="{{route('single_article',$article->slug)}}"><img src="{{asset('storage/article_pictures/'.$article->image)}}" alt="{{$article->title}}"></a>
+                                                <a href="{{route('single_article',$article->slug)}}"><img src="{{asset('uploads/article_pictures/'.$article->image)}}" alt="{{$article->title}}"></a>
                                             </div>
                                             <div class="down-content">
                                                 <div class="meta-category">
@@ -126,7 +126,7 @@
                                                 <li>
                                                     <a href="{{route('single_article',$p->slug)}}">
                                                         <div class="left-image">
-                                                            <img src="{{asset('storage/article_pictures/'.$p->image)}}" alt="">
+                                                            <img src="{{asset('uploads/article_pictures/'.$p->image)}}" alt="">
                                                             <span>{{$p->count_views}}</span>
                                                         </div>
                                                         <div class="right-content">

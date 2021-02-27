@@ -24,7 +24,7 @@
                                                     @foreach($article->gallery as $image)
                                                         <div class="item">
                                                             <div class="overlay"></div>
-                                                            <img src="{{asset('storage/article_pictures/'.$image->name)}}" alt="">
+                                                            <img src="{{asset('uploads/article_pictures/'.$image->name)}}" alt="">
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -150,7 +150,7 @@
                                     <div class="col-lg-12">
                                         <div class="single-post">
                                             <div class="post-image">
-                                                <img src="{{asset('storage/article_pictures/'.$article->image)}}" alt="">
+                                                <img src="{{asset('uploads/article_pictures/'.$article->image)}}" alt="">
                                             </div>
                                             <div class="down-content">
                                                 <h4>{{$article->title}}</h4>

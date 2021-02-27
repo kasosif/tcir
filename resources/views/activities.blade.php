@@ -1,131 +1,114 @@
 @extends('layout')
+@section('csspage')
+    <style>
+        ul.pagination {
+            border: none;
+        }
+    </style>
+
+@endsection
 @section('title') {{$cat->name}} @endsection
 @section('content')
-
     <section class="medium-gap standard-home list-home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="standard-posts">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="standard-post">
-                                    <div class="post-image">
-                                        <a href="single-standard-post.html"><img src="http://placehold.it/770x400" alt=""></a>
-                                    </div>
-                                    <div class="down-content">
-                                        <div class="meta-category">
-                                            <span>Article 1</span>
-                                        </div>
-                                        <a href="single-standard-post.html"><h4>The Ultimate <em>Women’s Bag</em> Guide Latest Fashion Trends</h4></a>
-                                        <ul class="post-info">
-                                            <li><a href="#">January 10, 2020</a></li>
-                                            <li><a href="#">Admin</a></li>
-                                        </ul>
-                                        <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer ethical tbh forage, four loko fam fanny pack synth. Kombucha craft beer PBRB etsy, YOLO franzen tumeric leggings sriracha fam quinoa godard next level. Cold-pressed kinfolk cronut.</p>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="comments-info">
-                                                    <i class="fa fa-comment-o"></i>
-                                                    <span>8 comments</span>
+                        @foreach($articles as $article)
+                            @if($article->videos()->count())
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="standard-post">
+                                        @if(\Illuminate\Support\Str::startsWith($article->mainVideo()->url, 'https://fb.watch/'))
+                                                <div class="post-image">
+                                                    <iframe src="https://www.facebook.com/plugins/video.php?href={{$article->mainVideo()->url}}&show_text=true&appId=1674770442828640" style="width: 100%; height: 300px; border: none;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6">
-                                                <ul class="share-post">
-                                                    <li><i class="fa fa-share-alt"></i></li>
-                                                    <li><a href="#">Facebook</a>,</li>
-                                                    <li><a href="#">Twitter</a>,</li>
-                                                    <li><a href="#">Pinterest</a></li>
+                                            @else
+                                                <div class="post-image">
+                                                    <iframe style="width: 100%; height: 300px; border: none;" src="{{$article->mainVideo()->url}}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            @endif
+                                            <div class="down-content">
+                                                <div class="meta-category">
+                                                    <span>Article {{ ($articles->currentpage()-1) * $articles->perpage() + $loop->index + 1 }}</span>
+                                                </div>
+                                                <a href="{{route('single_article',$article->slug)}}">
+                                                    <h4>{{$article->title}}</h4>
+                                                </a>
+                                                <ul class="post-info">
+                                                    <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
+                                                    <li><a href="#">Admin</a></li>
                                                 </ul>
+                                                <p>
+                                                    {{$article->description}}
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="comments-info">
+                                                            <i class="fa fa-comment-o"></i>
+                                                            <span>{{$article->comments()->count()}} comments</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <ul class="share-post">
+                                                            <li><i class="fa fa-share-alt"></i></li>
+                                                            <li><a href="#">Facebook</a>,</li>
+                                                            <li><a href="#">Twitter</a>,</li>
+                                                            <li><a href="#">Pinterest</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="standard-post">
-                                    <div class="post-image">
-                                        <iframe style="width: 100%; height: 300px; border: none;" src="https://www.youtube.com/embed/7qJCx7H_NQM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="down-content">
-                                        <div class="meta-category">
-                                            <span>Article 2</span>
-                                        </div>
-                                        <a href="single-standard-post.html"><h4>The Ultimate <em>Women’s Bag</em> Guide Latest Fashion Trends</h4></a>
-                                        <ul class="post-info">
-                                            <li><a href="#">January 10, 2020</a></li>
-                                            <li><a href="#">Admin</a></li>
-                                        </ul>
-                                        <p>Bushwick fam PBRB master cleanse post-ironic. Craft beer ethical tbh forage, four loko fam fanny pack synth. Kombucha craft beer PBRB etsy, YOLO franzen tumeric leggings sriracha fam quinoa godard next level. Cold-pressed kinfolk cronut.</p>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="comments-info">
-                                                    <i class="fa fa-comment-o"></i>
-                                                    <span>8 comments</span>
-                                                </div>
+                            @else
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="standard-post">
+                                            <div class="post-image">
+                                                <a href="{{route('single_article',$article->slug)}}"><img src="{{asset('storage/article_pictures/'.$article->image)}}" alt="{{$article->title}}"></a>
                                             </div>
-                                            <div class="col-lg-6 col-md-6">
-                                                <ul class="share-post">
-                                                    <li><i class="fa fa-share-alt"></i></li>
-                                                    <li><a href="#">Facebook</a>,</li>
-                                                    <li><a href="#">Twitter</a>,</li>
-                                                    <li><a href="#">Pinterest</a></li>
+                                            <div class="down-content">
+                                                <div class="meta-category">
+                                                    <span>Article {{ ($articles->currentpage()-1) * $articles->perpage() + $loop->index + 1 }}</span>
+                                                </div>
+                                                <a href="{{route('single_article',$article->slug)}}">
+                                                    <h4>{{$article->title}}</h4>
+                                                </a>
+                                                <ul class="post-info">
+                                                    <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
+                                                    <li><a href="#">Admin</a></li>
                                                 </ul>
+                                                <p>
+                                                    {{$article->description}}
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="comments-info">
+                                                            <i class="fa fa-comment-o"></i>
+                                                            <span>{{$article->comments()->count()}} comments</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <ul class="share-post">
+                                                            <li><i class="fa fa-share-alt"></i></li>
+                                                            <li><a href="#">Facebook</a>,</li>
+                                                            <li><a href="#">Twitter</a>,</li>
+                                                            <li><a href="#">Pinterest</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="single-posts">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="single-post quote-post">
-                                    <div class="post-image">
-                                        <div class="meta-category">
-                                            <span>Fashion</span>
-                                        </div>
-                                        <p>” Bicycle rights keytar meggings kickstarter messenger bag dreamcatcher crufix iceland bitters single-origin coffee.“</p>
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Umami Pin Paleo Skateboard Enamel</h4>
-                                        <ul class="post-info">
-                                            <li><a href="#">January 10, 2020</a></li>
-                                            <li><a href="#">Admin</a></li>
-                                            <li><a href="#">3 Comments</a></li>
-                                        </ul>
-                                        <p class="last-paragraph"></p>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="comments-info">
-                                                    <i class="fa fa-comment-o"></i>
-                                                    <span>8 comments</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6">
-                                                <ul class="share-post">
-                                                    <li><i class="fa fa-share-alt"></i></li>
-                                                    <li><a href="#">Facebook</a>,</li>
-                                                    <li><a href="#">Twitter</a>,</li>
-                                                    <li><a href="#">Pinterest</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endif
+                        @endforeach
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="pagination" style="border: none;">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                            </ul>
+                            {{$articles->links()}}
                         </div>
                     </div>
                 </div>
@@ -139,42 +122,20 @@
                                     </div>
                                     <div class="widget-content">
                                         <ul class="latest-post-list">
-                                            <li>
-                                                <a href="single-standard-post.html">
-                                                    <div class="left-image">
-                                                        <img src="http://placehold.it/80x80" alt="">
-                                                        <span>9</span>
-                                                    </div>
-                                                    <div class="right-content">
-                                                        <h6>croix flannel thundercats chicken</h6>
-                                                        <span>January 14, 2020</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="single-standard-post.html">
-                                                    <div class="left-image">
-                                                        <img src="http://placehold.it/80x80" alt="">
-                                                        <span>3</span>
-                                                    </div>
-                                                    <div class="right-content">
-                                                        <h6>The Ultimate Women Guide Latest Fashion</h6>
-                                                        <span>January 12, 2020</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="single-standard-post.html">
-                                                    <div class="left-image">
-                                                        <img src="http://placehold.it/80x80" alt="">
-                                                        <span>7</span>
-                                                    </div>
-                                                    <div class="right-content">
-                                                        <h6>wayfarers man braid marfa typewriter</h6>
-                                                        <span>January 10, 2020</span>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                            @foreach($latest_posts as $p)
+                                                <li>
+                                                    <a href="{{route('single_article',$p->slug)}}">
+                                                        <div class="left-image">
+                                                            <img src="{{asset('storage/article_pictures/'.$p->image)}}" alt="">
+                                                            <span>{{$p->count_views}}</span>
+                                                        </div>
+                                                        <div class="right-content">
+                                                            <h6>{{$p->title}}</h6>
+                                                            <span>{{date('F d, Y',strtotime($p->created_at))}}</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>

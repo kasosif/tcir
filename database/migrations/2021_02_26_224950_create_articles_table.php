@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
 
             $table->integer('count_views')->default(0);
             $table->string('image')->default('default.jpg');
+            $table->string('category')->default('activities');
 
             $table->integer('is_valid')->default(1);
             $table->timestamps();

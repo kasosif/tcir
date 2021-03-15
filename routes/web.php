@@ -52,9 +52,21 @@ Route::get('/demo/page/{page?}', function ($page = null) {
         switch ($cat->link) {
             case 'activities':
                 $latest_posts = \App\Article::where('is_valid', 1)
+                    ->where('category','activities')
                     ->orderBy('created_at','desc')
                     ->take(3)->get();
                 $articles = \App\Article::where('is_valid', 1)
+                    ->where('category','activities')
+                    ->orderBy('created_at','desc')
+                    ->paginate(5);
+                return view($page,compact('cat','articles','latest_posts'));
+            case 'read-for-you':
+                $latest_posts = \App\Article::where('is_valid', 1)
+                    ->where('category','read-for-you')
+                    ->orderBy('created_at','desc')
+                    ->take(3)->get();
+                $articles = \App\Article::where('is_valid', 1)
+                    ->where('category','read-for-you')
                     ->orderBy('created_at','desc')
                     ->paginate(5);
                 return view($page,compact('cat','articles','latest_posts'));

@@ -37,6 +37,10 @@ Route::get('/demo/our-resumes', function () {
     return view('ourresumes');
 })->name('our-resumes');
 
+Route::get('/demo/our-status', function () {
+    return view('statut');
+})->name('our-status');
+
 Route::get('/demo/become-member', function () {
    return view('become-member');
 });

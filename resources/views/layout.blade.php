@@ -93,6 +93,7 @@
                     <li><a href="{{route('our-resumes')}}">{{__("Our Resumes")}}</a></li>
                     <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
                     <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
+                    <li><a href="{{route('our-status')}}"></a>{{__("Our Status")}}</li>
                 </ul>
             </li>
         </ul>
@@ -172,6 +173,7 @@
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
                             <li><a href="{{route('our-mission')}}">{{__('Our Mission')}}</a></li>
                             <li><a href="{{route('our-resumes')}}">{{__('Our Resumes')}}</a></li>
+                            <li><a href="{{route('our-status')}}">{{__('Our Status')}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -244,6 +246,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link footer-link" href="{{route('our-mission')}}">{{__('Our Mission')}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link footer-link" href="{{route('our-status')}}">{{__('Our Status')}}</a>
                     </li>
                 </ul>
             </div>

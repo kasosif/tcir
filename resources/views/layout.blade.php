@@ -164,6 +164,9 @@
                             <li><a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a></li>
                         @endif
                     @endforeach
+                    <li>
+                        <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
+                    </li>
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>

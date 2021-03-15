@@ -37,6 +37,24 @@ Route::get('/demo/our-resumes', function () {
     return view('ourresumes');
 })->name('our-resumes');
 
+Route::get('/demo/become-member', function () {
+   return view('become-member');
+});
+Route::post('/demo/do-become-member', function (\Illuminate\Http\Request $request) {
+   $request->validate([
+       'fullname' => ['required', 'string', 'max:255'],
+       'email' => ['required', 'string', 'email', 'max:255', 'unique:members'],
+       'phone' => ['required', 'numeric','digits:8','unique:members']
+   ]);
+
+   \App\Member::create($request->except('_token'));
+
+    /**
+     * @todo Send Mail to contact@tcir.org
+     */
+   return redirect()->back()->with('success',__('Thank You for your registration'));
+
+})->name('doBecomeMember');
 Route::get('/demo/page/{page?}', function ($page = null) {
     if ($page) {
         $cat = \App\Category::where('link', $page)->first();

@@ -34,7 +34,7 @@
                                                 <ul class="post-info">
                                                     <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
                                                     <li><a href="#">Admin</a></li>
-                                                    <li><a href="#">{{$comments->count()}} Comments</a></li>
+{{--                                                    <li><a href="#">{{$comments->count()}} Comments</a></li>--}}
                                                 </ul>
                                                 @if($article->body)
                                                 {!! $article->body !!}
@@ -51,9 +51,8 @@
                                                     <div class="col-lg-5 col-md-6">
                                                         <ul class="share-post">
                                                             <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#">Twitter</a>,</li>
-                                                            <li><a href="#">Pinterest</a></li>
+                                                            <li><a href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Facebook</a>,</li>
+                                                            <li><a href="#" onclick='window.open("https://twitter.com/share?text={{$article->title}}&url={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Twitter</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -174,9 +173,8 @@
                                                     <div class="col-lg-5 col-md-6">
                                                         <ul class="share-post">
                                                             <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#">Twitter</a>,</li>
-                                                            <li><a href="#">Pinterest</a></li>
+                                                            <li><a href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Facebook</a>,</li>
+                                                            <li><a href="#" onclick='window.open("https://twitter.com/share?text={{$article->title}}&url={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Twitter</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -302,9 +300,8 @@
                                                 <div class="col-lg-5 col-md-6">
                                                     <ul class="share-post">
                                                         <li><i class="fa fa-share-alt"></i></li>
-                                                        <li><a href="#">Facebook</a>,</li>
-                                                        <li><a href="#">Twitter</a>,</li>
-                                                        <li><a href="#">Pinterest</a></li>
+                                                        <li><a href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Facebook</a>,</li>
+                                                        <li><a href="#" onclick='window.open("https://twitter.com/share?text={{$article->title}}&url={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Twitter</a></li>
                                                     </ul>
                                                 </div>
                                             </div>

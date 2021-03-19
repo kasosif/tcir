@@ -50,4 +50,8 @@ class Article extends Model
     public function mainVideo() {
         return $this->videos()->where('main', true)->first();
     }
+
+    public function mycategory() {
+        return $this->belongsTo(ArticleCategory::class,'mycategory_id');
+    }
 }

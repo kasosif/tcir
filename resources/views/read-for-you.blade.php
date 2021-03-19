@@ -44,17 +44,16 @@
                                                 </p>
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
-                                                        <div class="comments-info">
-                                                            <i class="fa fa-comment-o"></i>
-                                                            <span>{{$article->comments()->count()}} comments</span>
-                                                        </div>
+{{--                                                        <div class="comments-info">--}}
+{{--                                                            <i class="fa fa-comment-o"></i>--}}
+{{--                                                            <span>{{$article->comments()->count()}} comments</span>--}}
+{{--                                                        </div>--}}
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <ul class="share-post">
                                                             <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#">Twitter</a>,</li>
-                                                            <li><a href="#">Pinterest</a></li>
+                                                            <li><a href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Facebook</a>,</li>
+                                                            <li><a href="#" onclick='window.open("https://twitter.com/share?text={{$article->title}}&url={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Twitter</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -85,17 +84,12 @@
                                                 </p>
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
-                                                        <div class="comments-info">
-                                                            <i class="fa fa-comment-o"></i>
-                                                            <span>{{$article->comments()->count()}} comments</span>
-                                                        </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <ul class="share-post">
                                                             <li><i class="fa fa-share-alt"></i></li>
-                                                            <li><a href="#">Facebook</a>,</li>
-                                                            <li><a href="#">Twitter</a>,</li>
-                                                            <li><a href="#">Pinterest</a></li>
+                                                            <li><a href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Facebook</a>,</li>
+                                                            <li><a href="#" onclick='window.open("https://twitter.com/share?text={{$article->title}}&url={{route('single_article',$article->slug)}}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=300,width=400,height=400");'>Twitter</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -115,6 +109,20 @@
                 <div class="col-lg-4">
                     <div class="main-sidebar right-sidebar">
                         <div class="row">
+                            <div class="col-lg-12">
+                                <div class="widget-sidebar categories">
+                                    <div class="widget-header">
+                                        <h4>Categories</h4>
+                                    </div>
+                                    <div class="widget-content">
+                                        <ul class="categories">
+                                            @foreach($article_categories as $article_category)
+                                                <li><a href="{{url()->current()}}?category={{$article_category->id}}">{{$article_category->name}} <span>({{$article_category->countArticles($cat->link)}})</span></a></li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-lg-12">
                                 <div class="widget-sidebar latest-posts">
                                     <div class="widget-header">
@@ -136,44 +144,6 @@
                                                     </a>
                                                 </li>
                                             @endforeach
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="widget-sidebar categories">
-                                    <div class="widget-header">
-                                        <h4>Categories</h4>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="categories">
-                                            <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                                            <li><a href="#">Fashion <span>(9)</span></a></li>
-                                            <li><a href="#">Beauty <span>(7)</span></a></li>
-                                            <li><a href="#">Nature <span>(19)</span></a></li>
-                                            <li><a href="#">Nightlife <span>(4)</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="widget-sidebar tags-cloud">
-                                    <div class="widget-header">
-                                        <h4>Tags Cloud</h4>
-                                    </div>
-                                    <div class="widget-content">
-                                        <ul class="tags">
-                                            <li><a href="#">lifestyle</a></li>
-                                            <li><a href="#">beauty</a></li>
-                                            <li><a href="#">fashion</a></li>
-                                            <li><a href="#">js</a></li>
-                                            <li><a href="#">psd</a></li>
-                                            <li><a href="#">brand</a></li>
-                                            <li><a href="#">wordpress</a></li>
-                                            <li><a href="#">css</a></li>
-                                            <li><a href="#">nature</a></li>
-                                            <li><a href="#">inspiration</a></li>
-                                            <li><a href="#">motivation</a></li>
                                         </ul>
                                     </div>
                                 </div>

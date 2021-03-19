@@ -27,6 +27,16 @@
         ul.social-icons li a.active {
             background: #00adef;
         }
+        .my-footer-icon:hover {
+            color: #000;
+        }
+        .newest-acts-link {
+            color: #fff;
+        }
+        .newest-acts-link:hover {
+            text-decoration: none;
+            color: #4166d4;
+        }
     </style>
     @yield('csspage')
 </head>
@@ -90,10 +100,14 @@
             <li class="has-sub">
                 <a href="#">{{__("Contact")}} <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="{{route('our-resumes')}}">{{__("Our Resumes")}}</a></li>
-                    <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
                     <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
-                    <li><a href="{{route('our-status')}}"></a>{{__("Our Status")}}</li>
+                    <li>
+                        <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
+                    </li>
+                    <li><a href="{{route('our-resumes')}}">{{__("Advisory Board")}}</a></li>
+                    <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
+
+                    <li><a href="{{route('our-status')}}"></a>{{__("Our Documents")}}</li>
                 </ul>
             </li>
         </ul>
@@ -113,14 +127,14 @@
             </div>
             <div class="col-lg-4 align-self-center">
                 <div class="logo">
-                    <a href="{{url('demo')}}"><img src="{{asset('images/logo.png')}}" style="width: 100%" alt="" ></a>
+                    <a href="{{url('demo')}}"><img src="{{asset('images/logo_'.app()->getLocale().'.png')}}" style="width: 100%" alt="" ></a>
                 </div>
             </div>
             <div class="col-lg-4 align-self-center">
-                <ul class="search-item">
-                    <li class="menu-item menu-search">
-                        <a href="#" id="menu-search-btn">
-                            <i class="icon_search"></i>
+                <ul style="list-style: none; float: right;">
+                    <li style="background: #1e1e1e;width: 150px;text-align: center;padding: 5px;border-radius: 20px;">
+                        <a class="newest-acts-link" href="{{url('/demo/page/calendar')}}">
+                            {{__('Planned Activities')}}
                         </a>
                     </li>
                 </ul>
@@ -134,7 +148,7 @@
     <div class="container expanded">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="#"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo.png')}}" alt=""></a>
+                <a href="#"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo_'.app()->getLocale().'.png')}}" alt=""></a>
             </div>
             <div class="header-nav">
                 <ul class="main-menu">
@@ -165,9 +179,6 @@
                             <li><a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a></li>
                         @endif
                     @endforeach
-                    <li>
-                        <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
-                    </li>
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
@@ -254,8 +265,12 @@
             </div>
         </div>
         <div class="row pb-0">
-            <div class="col-md-12 d-flex justify-content-center ">
-                <ul class="social-icons" style="list-style: none;display: inline-flex">
+            <div class="col-md-12">
+                <ul style="list-style:none;float: left;">
+                    <li style="color: #fff;font-size: 13px;"><i class="fa fa-map-marker"></i> R12 , Rue du bourgogne, Menzah</li>
+                    <li style="color: #fff;font-size: 13px;"><i class="fa fa-phone"></i> 71784346</li>
+                </ul>
+                <ul class="social-icons" style="float: right;list-style: none;display: inline-flex">
                     <li><a href="#"><i class="my-footer-icon fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="my-footer-icon fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="my-footer-icon fa fa-linkedin"></i></a></li>

@@ -35,7 +35,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <button type="submit" class="filled-button">{{__('Become a Member')}}</button>
+                                                <button type="submit" class="filled-button">{{__('Submit')}}</button>
                                             </fieldset>
                                         </div>
                                     </div>

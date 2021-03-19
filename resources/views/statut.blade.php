@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title') {{__('Our Status')}}@endsection
+@section('title') {{__('Our Documents')}}@endsection
 @section('csspage')
     <style>
         /* CSS for responsive iframe */
@@ -71,7 +71,7 @@
                     <div class="first-row">
                         <div class="widget-sidebar find-on-map">
                             <div class="widget-header">
-                                <h4>{{__('Our Status')}}</h4>
+                                <h4>{{__('Our Documents')}}</h4>
                             </div>
                             <div class="widget-container">
                                 <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">

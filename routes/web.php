@@ -59,7 +59,7 @@ Route::post('/demo/do-become-member', function (\Illuminate\Http\Request $reques
    return redirect()->back()->with('success',__('Thank You for your registration'));
 
 })->name('doBecomeMember');
-Route::get('/demo/page/{page?}', function ($page = null) {
+Route::get('/demo/page/{page?}', function (\Illuminate\Http\Request $request, $page = null) {
     if ($page) {
         $cat = \App\Category::where('link', $page)->first();
         if (!$cat) {
@@ -73,25 +73,34 @@ Route::get('/demo/page/{page?}', function ($page = null) {
         }
         switch ($cat->link) {
             case 'activities':
+                $article_categories = \App\ArticleCategory::all();
                 $latest_posts = \App\Article::where('is_valid', 1)
                     ->where('category','activities')
                     ->orderBy('created_at','desc')
                     ->take(3)->get();
                 $articles = \App\Article::where('is_valid', 1)
-                    ->where('category','activities')
-                    ->orderBy('created_at','desc')
+                    ->where('category','activities');
+
+                if ($request->has('category')) {
+                    $articles = $articles->where('mycategory_id',$request->get('category'));
+                }
+                $articles = $articles->orderBy('created_at','desc')
                     ->paginate(5);
-                return view($page,compact('cat','articles','latest_posts'));
+                return view($page,compact('cat','articles','latest_posts','article_categories'));
             case 'read-for-you':
+                $article_categories = \App\ArticleCategory::all();
                 $latest_posts = \App\Article::where('is_valid', 1)
                     ->where('category','read-for-you')
                     ->orderBy('created_at','desc')
                     ->take(3)->get();
                 $articles = \App\Article::where('is_valid', 1)
-                    ->where('category','read-for-you')
-                    ->orderBy('created_at','desc')
-                    ->paginate(5);
-                return view($page,compact('cat','articles','latest_posts'));
+                    ->where('category','read-for-you');
+                if ($request->has('category')) {
+                    $articles = $articles->where('mycategory_id',$request->get('category'));
+                }
+                $articles = $articles->orderBy('created_at','desc')
+                ->paginate(5);
+                return view($page,compact('cat','articles','latest_posts','article_categories'));
         }
         return view($page,compact('cat'));
     } else {

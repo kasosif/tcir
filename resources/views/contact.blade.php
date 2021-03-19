@@ -13,7 +13,7 @@
                             </div>
                             <div class="widget-container">
                                 <div id="map">
-                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tunis+(TCIR)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed&language={{app()->getLocale()}}" style="border:0; width: 100%; height: 360px; border: none;" allowfullscreen></iframe>
+                                    <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=36.833302,10.172698&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed&language={{app()->getLocale()}}" style="border:0; width: 100%; height: 360px; border: none;" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>

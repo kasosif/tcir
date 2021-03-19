@@ -24,6 +24,10 @@ class CreateArticlesTable extends Migration
             $table->string('image')->default('default.jpg');
             $table->string('category')->default('activities');
 
+            $table->bigInteger('mycategory_id')->unsigned()->nullable();
+            $table->foreign('mycategory_id')->references('id')->on('article_categories')->onDelete('set null');
+
+
             $table->integer('is_valid')->default(1);
             $table->timestamps();
         });

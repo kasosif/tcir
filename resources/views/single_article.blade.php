@@ -30,7 +30,7 @@
                                                 </div>
                                             </div>
                                             <div class="down-content">
-                                                <h4>{{$article->title}}</h4>
+                                                <h4 @if($article->lang == "ar") style="text-align: right" @endif>{{$article->title}}</h4>
                                                 <ul class="post-info">
                                                     <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
                                                     <li><a href="#">Admin</a></li>
@@ -152,7 +152,7 @@
                                                 <img src="{{asset('uploads/article_pictures/'.$article->image)}}" alt="">
                                             </div>
                                             <div class="down-content">
-                                                <h4>{{$article->title}}</h4>
+                                                <h4 @if($article->lang == "ar") style="text-align: right" @endif>{{$article->title}}</h4>
                                                 <ul class="post-info">
                                                     <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
                                                     <li><a href="#">Admin</a></li>
@@ -279,7 +279,7 @@
                                             @endif
                                         </div>
                                         <div class="down-content">
-                                            <h4>{{$article->title}}</h4>
+                                            <h4 @if($article->lang == "ar") style="text-align: right" @endif>{{$article->title}}</h4>
                                             <ul class="post-info">
                                                 <li><a href="#">{{date('F d, Y',strtotime($article->created_at))}}</a></li>
                                                 <li><a href="#">Admin</a></li>

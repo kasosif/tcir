@@ -14,6 +14,16 @@
 
     <link rel="stylesheet" href="{{asset('styles/bootstrap.css')}}" />
     <link rel="stylesheet" href="{{asset('styles/main.css')}}" />
+    @if(app()->getLocale() == "ar")
+        <style>
+            section.above-header ul.social-icons li:last-child {
+                margin-right: 10px;
+            }
+            .single-posts .single-post .down-content h4 {
+                text-align: right;
+            }
+        </style>
+    @endif
     <style>
         .above-header {
             background-color: #fbebca;

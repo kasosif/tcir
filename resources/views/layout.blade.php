@@ -35,7 +35,16 @@
         }
         .newest-acts-link:hover {
             text-decoration: none;
-            color: #4166d4;
+            color: #fff !important;
+        }
+
+        a.newest-acts-link {
+            white-space: nowrap;
+            color: #fff !important;
+        }
+
+        a.newest-acts-link:hover {
+            color: #fff !important;
         }
     </style>
     @yield('csspage')
@@ -132,7 +141,7 @@
             </div>
             <div class="col-lg-4 align-self-center">
                 <ul style="list-style: none; float: right;">
-                    <li style="background: #1e1e1e;width: 150px;text-align: center;padding: 5px;border-radius: 20px;">
+                    <li class="pl-activities" style="background: #465dc3;width: 165px;text-align: center;padding: 5px;border-radius: 20px;">
                         <a class="newest-acts-link" href="{{url('/demo/page/calendar')}}">
                             {{__('Planned Activities')}}
                         </a>
@@ -182,9 +191,10 @@
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
+                            <li><a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a></li>
                             <li><a href="{{route('our-mission')}}">{{__('Our Mission')}}</a></li>
-                            <li><a href="{{route('our-resumes')}}">{{__('Our Resumes')}}</a></li>
-                            <li><a href="{{route('our-status')}}">{{__('Our Status')}}</a></li>
+                            <li><a href="{{route('our-resumes')}}">{{__('Advisory Board')}}</a></li>
+                            <li><a href="{{route('our-status')}}">{{__('Our Documents')}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -253,13 +263,13 @@
                         <a href="{{route('contact')}}" class="nav-link footer-link">{{__('Contact Us')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="{{route('our-resumes')}}">{{__('Our Resumes')}}</a>
+                        <a class="nav-link footer-link" href="{{route('our-resumes')}}">{{__('Advisory Board')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link footer-link" href="{{route('our-mission')}}">{{__('Our Mission')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link footer-link" href="{{route('our-status')}}">{{__('Our Status')}}</a>
+                        <a class="nav-link footer-link" href="{{route('our-status')}}">{{__('Our Documents')}}</a>
                     </li>
                 </ul>
             </div>
@@ -267,8 +277,13 @@
         <div class="row pb-0">
             <div class="col-md-12">
                 <ul style="list-style:none;float: left;">
-                    <li style="color: #fff;font-size: 13px;"><i class="fa fa-map-marker"></i> R12 , Rue du bourgogne, Menzah</li>
+                    <li style="color: #fff;font-size: 13px;">
+                        <a style="color: #fff" href="{{route('contact')}}">
+                            <i class="fa fa-map-marker"></i> R12 , Rue du bourgogne, Menzah
+                        </a>
+                    </li>
                     <li style="color: #fff;font-size: 13px;"><i class="fa fa-phone"></i> 71784346</li>
+                    <li style="color: #fff;font-size: 13px;"><i class="fa fa-envelope"></i> contact@tcir.org</li>
                 </ul>
                 <ul class="social-icons" style="float: right;list-style: none;display: inline-flex">
                     <li><a href="#"><i class="my-footer-icon fa fa-facebook"></i></a></li>

@@ -48,7 +48,7 @@
     "loader.4": "ظ",
     "loader.5": "ا",
     "loader.6": "ر",
-    "Steering Committee": "لجنة المديرين",
+    "Steering Committee": "اللجنة المديرة",
     "Advisory Board": "المجلس الاستشاري",
     "Scientific Council": "المجلس العلمي",
     "Khemais Jehanaoui": "خميس الجهيناوي",
@@ -66,5 +66,6 @@
     "Submit": "إرسال",
     "Introduction": "المقدمة",
     "Planned Activities": "الانشطة القادمة",
-    "Our Documents" : "وثائقنا"
+    "Our Documents" : "وثائقنا",
+    "mission.skons" : "مهمتنا"
 }

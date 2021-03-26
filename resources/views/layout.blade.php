@@ -22,6 +22,9 @@
             .single-posts .single-post .down-content h4 {
                 text-align: right;
             }
+            html, body {
+                text-align: right !important;
+            }
         </style>
     @endif
     <style>
@@ -116,13 +119,13 @@
                     </li>
                 @endif
             @endforeach
+            <li>
+                <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
+            </li>
             <li class="has-sub">
                 <a href="#">{{__("Contact")}} <i class="sub-icon fa fa-angle-down"></i></a>
                 <ul class="sub-menu">
                     <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
-                    <li>
-                        <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
-                    </li>
                     <li><a href="{{route('our-resumes')}}">{{__("Advisory Board")}}</a></li>
                     <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
 
@@ -198,10 +201,12 @@
                             <li><a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}}</a></li>
                         @endif
                     @endforeach
+                    <li class="menu-item">
+                        <a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a>
+                    </li>
                     <li class="menu-item-has-children"><a href="#">{{__('Contact')}}</a>
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
-                            <li><a href="{{url('demo/become-member')}}">{{__('Become a Member')}}</a></li>
                             <li><a href="{{route('our-mission')}}">{{__('Our Mission')}}</a></li>
                             <li><a href="{{route('our-resumes')}}">{{__('Advisory Board')}}</a></li>
                             <li><a href="{{route('our-status')}}">{{__('Our Documents')}}</a></li>

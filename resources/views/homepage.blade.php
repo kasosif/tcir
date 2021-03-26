@@ -2,7 +2,19 @@
 @section('title') {{__('Home')}} @endsection
 @section('csspage')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+    <style>
+        a {
+            text-decoration: none !important;
+        }
+        .widget-sidebar.about-me {
+            border: 3px solid #465dc3;
+            border-radius: 15px;
+        }
+        .image-thumb {
+            border: 3px solid #eee;
+            border-radius: 5px;
+        }
+    </style>
 @endsection
 @section('content')
     <section class="medium-gap full-width-home">
@@ -100,20 +112,20 @@
             </div>
         </div>
     </section>
-    <section class="about-me about-version-two">
+    <section class="about-me about-version-two" style="margin-top: 50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="widget-sidebar about-me">
                         <div class="widget-header">
-                            <h4>{{__('Steering Committee')}}</h4>
+                            <h4 style="background-color: #465dc3; border-radius: 15px;">{{__('Steering Committee')}}</h4>
                         </div>
                         <div class="widget-content">
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv4.jpeg')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv4.jpeg')}}" alt="" class="image-thumb">
                                             <h6>{{__('Khemais Jehanaoui')}}</h6>
                                             <h5>{{__('Founder')}}</h5>
                                             <a onclick="showCv('cv4Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
@@ -123,7 +135,7 @@
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv1.jpeg')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv1.jpeg')}}" alt="" class="image-thumb">
                                             <h6>{{__('Ahmed Abderraouf OUNAIES')}}</h6>
                                             <h5>{{__('Vice President')}}</h5>
                                             <a onclick="showCv('cv1Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
@@ -133,7 +145,7 @@
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv3.jpeg')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv3.jpeg')}}" alt="" class="image-thumb">
                                             <h6>{{__('Mondher Dhraïef')}}</h6>
                                             <h5>{{__('Secretary General')}}</h5>
                                             <a onclick="showCv('cv3Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
@@ -143,7 +155,7 @@
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv5.jpeg')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv5.jpeg')}}" alt="" class="image-thumb">
                                             <h6>{{__('Mohsen Boujbel')}}</h6>
                                             <h5>{{__('Treasurer')}}</h5>
                                             <a onclick="showCv('cv5Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
@@ -153,7 +165,7 @@
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv2.png')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv2.png')}}" alt="" class="image-thumb">
                                             <h6>{{__('Habib Essid')}}</h6>
                                             <h5>&nbsp;</h5>
                                             <a onclick="showCv('cv2Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>
@@ -163,7 +175,7 @@
                                 <div class="col-lg-4">
                                     <div class="widget-sidebar about-me">
                                         <div class="widget-content" style="text-align: center">
-                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv6.jpeg')}}" alt="">
+                                            <img style="width: 200px;height: 200px;" src="{{asset('images/cv6.jpeg')}}" alt="" class="image-thumb">
                                             <h6>{{__('Abdessalem Hatira')}}</h6>
                                             <h5>&nbsp;</h5>
                                             <a onclick="showCv('cv6Modal')" style="color:green;cursor: pointer;"><i class="fa fa-file"></i> {{__('View Resume')}}</a>

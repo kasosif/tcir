@@ -29,6 +29,10 @@ Route::get('/demo/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/demo/in-progress', function () {
+    return view('in_progress');
+})->name('in_progress');
+
 Route::get('/demo/our-mission', function () {
     return view('ourmission');
 })->name('our-mission');
@@ -104,7 +108,7 @@ Route::get('/demo/page/{page?}', function (\Illuminate\Http\Request $request, $p
         }
         return view($page,compact('cat'));
     } else {
-        return redirect()->route('homepage');
+        return redirect()->route('in_progress');
     }
 });
 

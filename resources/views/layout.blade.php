@@ -96,11 +96,11 @@
             @foreach($categories as $cat)
                 @if($cat->subs()->count())
                     <li class="has-sub">
-                        <a href="{{url('/demo/page/'.$cat->link)}}">{{$cat->name}} <i class="sub-icon fa fa-angle-down"></i></a>
+                        <a href="#">{{$cat->name}} <i class="sub-icon fa fa-angle-down"></i></a>
                         <ul class="sub-menu">
                             @foreach($cat->subs as $sub)
                                 @if($sub->subs()->count())
-                                    <li class="has-sub"><a href="{{url('/demo/page/'.$sub->link)}}">{{$sub->name}}</a>
+                                    <li class="has-sub"><a href="#">{{$sub->name}}</a>
                                         <ul class="sub-menu">
                                             @foreach($sub->subs as $child)
                                                 <li><a href="{{url('/demo/page/'.$child->link)}}">{{$child->name}}</a></li>
@@ -130,6 +130,14 @@
                     <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
 
                     <li><a href="{{route('our-status')}}"></a>{{__("Our Documents")}}</li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="#">{{__('Language')}}</a>
+                <ul class="sub-menu">
+                    <li><a @if(app()->getLocale() == 'en') style="color: #00adef;" @endif href="{{app()->getLocale() == 'en' ? "#" : url('locale/en')}}" title="{{__('English')}}">{{__('English')}}</a></li>
+                    <li><a @if(app()->getLocale() == 'fr') style="color: #00adef;" @endif href="{{app()->getLocale() == 'fr' ? "#" : url('locale/fr')}}" title="{{__('French')}}">{{__('French')}}</a></li>
+                    <li><a @if(app()->getLocale() == 'ar') style="color: #00adef;" @endif href="{{app()->getLocale() == 'ar' ? "#" : url('locale/ar')}}" title="{{__('Arabic')}}">{{__('Arabic')}}</a></li>
                 </ul>
             </li>
         </ul>
@@ -170,7 +178,7 @@
     <div class="container expanded">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="#"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo_'.app()->getLocale().'.png')}}" alt=""></a>
+                <a href="{{url('demo')}}"><img style="width: 200px;height: 44px !important;" src="{{asset('images/logo_'.app()->getLocale().'.png')}}" alt=""></a>
             </div>
             <div class="header-nav">
                 <ul class="main-menu">

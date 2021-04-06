@@ -36,6 +36,10 @@ Route::get('/demo/in-progress', function () {
 Route::get('/demo/our-mission', function () {
     return view('ourmission');
 })->name('our-mission');
+Route::get('/demo/our-mission-2', function () {
+    return view('ourmission2');
+})->name('our-mission2');
+
 
 Route::get('/demo/our-resumes', function () {
     return view('ourresumes');

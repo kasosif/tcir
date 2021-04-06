@@ -28,6 +28,9 @@
         </style>
     @endif
     <style>
+        html, body {
+        font-family: Tahoma,Verdana,Segoe,sans-serif !important;
+        }
         .above-header {
             background-color: #fbebca;
         }
@@ -128,7 +131,7 @@
                     <li><a href="{{route('contact')}}"></a>{{__("Contact Us")}}</li>
                     <li><a href="{{route('our-resumes')}}">{{__("Advisory Board")}}</a></li>
                     <li><a href="{{route('our-mission')}}"></a>{{__("Our Mission")}}</li>
-
+                    <li><a href="{{route('our-mission2')}}">{{__("ourmission2")}}</a></li>
                     <li><a href="{{route('our-status')}}"></a>{{__("Our Documents")}}</li>
                 </ul>
             </li>
@@ -216,6 +219,7 @@
                         <ul class="sub-menu">
                             <li><a href="{{route('contact')}}">{{__('Contact Us')}}</a></li>
                             <li><a href="{{route('our-mission')}}">{{__('Our Mission')}}</a></li>
+                            <li><a href="{{route('our-mission2')}}">{{__("ourmission2")}}</a></li>
                             <li><a href="{{route('our-resumes')}}">{{__('Advisory Board')}}</a></li>
                             <li><a href="{{route('our-status')}}">{{__('Our Documents')}}</a></li>
                         </ul>

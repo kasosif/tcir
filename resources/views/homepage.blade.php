@@ -14,6 +14,11 @@
             border: 3px solid #eee;
             border-radius: 5px;
         }
+        li {
+            font-weight: 600;
+            color: #5a5a5a;
+            font-size: 14px;
+        }
     </style>
 @endsection
 @section('content')
@@ -22,53 +27,152 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="widget-sidebar find-on-map">
-                        <div class="widget-container">
-                            <h4>Who are we ?</h4>
-                            <p>
-                                The Tunisian Council for International Relations (TCIR) is a Tunisia based not for profit and independent research and policy center focused on the Arab, African and Mediterranean spheres
-                            </p>
-                            <p>
-                                The TCIR is led by a multidisciplinary Board of Directors consisting of senior public figures, seasoned diplomats, academics, subject matter experts, media professionals, entrepreneurs, and business leaders.
-                            </p>
-                            <p>
-                                The TCIR is open to cooperation, collaboration and coordination with other experts, centers, political, diplomatic, and academic institutions as well as with the wide range of social and economic actors including civil society organizations
-                            </p>
-                            <h4>
-                                Why ?
-                            </h4>
-                            <p>
-                                Because the best policies pertaining to the Arab, African and Mediterranean spheres can only come from the region, and because this region has an underused human capital, organic thought leadership should drive the region’s public policies processes.
-                            </p>
-                            <h4>
-                                Vision
-                            </h4>
-                            <p>
-                                The TCIR works towards evidence based and well informed public policy processes
-                            </p>
-                            <h4>
-                                Mission Statement
-                            </h4>
-                            <p>
-                                Establish convening space and power in Tunisia to inform policy decisions within and pertaining the Arab, African and Mediterranean spheres.
-                            </p>
-                            <h4>
-                                Objectives
-                            </h4>
-                            <ul>
-                                <li>
-                                    Enhance collaborative thinking among a wide range of stakeholders in the Arab, African and Mediterranean spheres.
-                                </li>
-                                <li>
-                                    Build bridges between research and policy making through actionable research leading to evidence based policy recommendations.
-                                </li>
-                                <li>
-                                    Develop and propose innovative solutions to conflicts in the Arab, African and Mediterranean spheres.
-                                </li>
-                                <li>
-                                    Foster the development of partnerships between the public and private sectors.
-                                </li>
-                            </ul>
-                        </div>
+                        @if(app()->getLocale() == "en")
+                            <div class="widget-container">
+                                <h4 style="color: #465dc3">Who are we ?</h4>
+                                <p>
+                                    The Tunisian Council for International Relations (TCIR) is a Tunisia based not for profit and independent research and policy center focused on the Arab, African and Mediterranean spheres
+                                </p>
+                                <p>
+                                    The TCIR is led by a multidisciplinary Board of Directors consisting of senior public figures, seasoned diplomats, academics, subject matter experts, media professionals, entrepreneurs, and business leaders.
+                                </p>
+                                <p>
+                                    The TCIR is open to cooperation, collaboration and coordination with other experts, centers, political, diplomatic, and academic institutions as well as with the wide range of social and economic actors including civil society organizations
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Why ?
+                                </h4>
+                                <p>
+                                    Because the best policies pertaining to the Arab, African and Mediterranean spheres can only come from the region, and because this region has an underused human capital, organic thought leadership should drive the region’s public policies processes.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Vision
+                                </h4>
+                                <p>
+                                    The TCIR works towards evidence based and well informed public policy processes
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Mission Statement
+                                </h4>
+                                <p>
+                                    Establish convening space and power in Tunisia to inform policy decisions within and pertaining the Arab, African and Mediterranean spheres.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Objectives
+                                </h4>
+                                <ul>
+                                    <li>
+                                        Enhance collaborative thinking among a wide range of stakeholders in the Arab, African and Mediterranean spheres.
+                                    </li>
+                                    <li>
+                                        Build bridges between research and policy making through actionable research leading to evidence based policy recommendations.
+                                    </li>
+                                    <li>
+                                        Develop and propose innovative solutions to conflicts in the Arab, African and Mediterranean spheres.
+                                    </li>
+                                    <li>
+                                        Foster the development of partnerships between the public and private sectors.
+                                    </li>
+                                </ul>
+                            </div>
+                        @elseif(app()->getLocale() == "ar")
+                            <div class="widget-container">
+                                <h4 style="color: #465dc3">من نحن؟</h4>
+                                <p>
+                                    المجلس التونسي للعلاقات الدولية (TCIR) هو مركز أبحاث مستقل غير ربحي مقره تونس ويهتم بالفضاءات العربية والإفريقية والمتوسطية.
+                                </p>
+                                <p>
+                                    يضطلع بتسيير (TCIR) مجلس إدارة متعدد التخصصات يتكون من شخصيات عامة وكبار الدبلوماسيين والأكاديميين والخبراء والإعلاميين ورجال الأعمال.
+                                </p>
+                                <p>
+                                    ويعمل (TCIR) في انفتاح على التعاون والتنسيق مع الخبراء والمراكز والمؤسسات السياسية والدبلوماسية والأكاديمية الأخرى وكذلك مع مجموعة واسعة من الجهات الاجتماعية والاقتصادية الفاعلة، بما في ذلك منظمات المجتمع المدني.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    لماذا ؟
+                                </h4>
+                                <p>
+                                    باعتبار أنّ أفضل السياسات المتعلقة بالفضاءات العربية والأفريقية والمتوسطية لا يمكن أن تتأتّى إلا من المنطقة، وأن رأس المال البشري في منطقتنا غير مستغل بشكل كافٍ، وجب العمل على تطوير السياسات العامة من خلال قوة عضوية رائدة.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    الرؤية
+                                </h4>
+                                <p>
+                                    يجتهد (TCIR) في تطوير السياسات العامة بناءً على الأدلة العلمية والمصادر المطّلعة.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    المهمة
+                                </h4>
+                                <p>
+                                    خلق مساحة وقوة تعبئة في تونس من أجل إحكام توجيه السياسات العامة المتعلّقة بالفضاءات العربية والأفريقية والمتوسطية.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    الأهداف
+                                </h4>
+                                <ul>
+                                    <li>
+                                        تعزيز التفكير الجماعي مع طيف واسع من القوى الحية في الفضاءات العربية والإفريقية والمتوسطية.
+                                    </li>
+                                    <li>
+                                        بناء الجسور بين البحث وتطوير السياسات العامة من خلال استخلاص التوصيات العملية الناتجة عن البحث العلمي.
+                                    </li>
+                                    <li>
+                                        تطوير واقتراح حلول مبتكرة للنزاعات في المناطق العربية والأفريقية والمتوسطية.
+                                    </li>
+                                    <li>
+                                        تعزيز تنمية الشراكات بين القطاعين العام والخاص.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        @else
+                            <div class="widget-container">
+                                <h4 style="color: #465dc3">Qui sommes-nous ?</h4>
+                                <p>
+                                    Le Conseil Tunisien des Relations Internationales (CTRI) est un centre de recherche indépendant à but non lucratif basé en Tunisie et axé sur les sphères arabe, africaine et méditerranéenne.
+                                </p>
+                                <p>
+                                    Le CTRI est dirigé par un Conseil d'Administration multidisciplinaire composé de personnalités publiques, de diplomates chevronnés, d'universitaires, d'experts, de professionnels des médias, d'entrepreneurs et de chefs d'entreprises.
+                                </p>
+                                <p>
+                                    Le CTRI est ouvert à la coopération, à la collaboration et à la coordination avec d'autres experts, centres, institutions politiques, diplomatiques et académiques ainsi qu'avec un large éventail d'acteurs sociaux et économiques, y compris les organisations de la société civile.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Pourquoi ?
+                                </h4>
+                                <p>
+                                    Etant donné que les meilleures politiques relatives aux sphères arabe, africaine et méditerranéenne ne peuvent venir que de la région, et que le capital humain de celle-ci est sous-utilisé, les processus d’élaboration de politiques publiques dans la région devraient être conduits par un leadership organique visionnaire.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Vision
+                                </h4>
+                                <p>
+                                    Le CTRI œuvre à l'élaboration de processus de politique publique fondés sur des données probantes et des sources bien informées.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Mission
+                                </h4>
+                                <p>
+                                    Créer un espace et un pouvoir de mobilisation en Tunisie en vue d’éclairer les décisions politiques dans et concernant les sphères arabe, africaine et méditerranéenne.
+                                </p>
+                                <h4 style="color: #465dc3">
+                                    Objectifs
+                                </h4>
+                                <ul>
+                                    <li>
+                                        Améliorer la réflexion collaborative avec un large éventail de parties prenantes dans les sphères arabe, africaine et méditerranéenne.
+                                    </li>
+                                    <li>
+                                        Construire des ponts entre la recherche et l'élaboration des politiques publiques grâce à une recherche exploitable menant à des recommandations fondées sur des données probantes.
+                                    </li>
+                                    <li>
+                                        Développer et proposer des solutions innovantes aux conflits dans les sphères arabe, africaine et méditerranéenne.
+                                    </li>
+                                    <li>
+                                        Favoriser le développement de partenariats entre les secteurs public et privé.
+                                    </li>
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
